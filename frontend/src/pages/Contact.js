@@ -1,10 +1,10 @@
 import React from "react";
 
-export function History(){
+export function Contact(){
   
     return (
       <div >
-        <h1>Hola historia</h1>
+        <h1>Hola Contactos</h1>
       </div>
     )
 }
