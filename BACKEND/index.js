@@ -23,7 +23,9 @@ mongoose.connect(process.env.DATABASE, {
 }).then(() => {console.log("Estás conectado a la base de datos");} )
 
 //routes setup
-app.use('/routes', require("./routes/indexUser"));
+app.use('/api/users', require("./routes/indexUser"));
+app.use('/api/publications', require("./routes/indexPublication"));
+
 
 //listen to port
 const port = process.env.PORT;

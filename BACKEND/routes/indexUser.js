@@ -5,7 +5,7 @@ const { create, list, remove, userById } = require('../controllers/userControlle
 
 router.get('/usersList', list);
 router.post('/createUser', create);
-router.delete('/:userId', remove);
+router.delete('/delete/:userId', remove);
 
 router.param('userId', userById);
 

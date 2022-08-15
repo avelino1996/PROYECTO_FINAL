@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, NavLink } from 'react-router-dom';
-import { Inicio } from './pages/Inicio';
+import { Home } from './pages/home';
 import { History } from './pages/history';
 import { Contact } from './pages/Contact';
 import MountainRout from './pages/mountainRout'
@@ -22,7 +22,7 @@ export default function App() {
           </nav>
 
           <Routes>
-            <Route exact path="/" element={<Inicio />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="history" element={<History />} />
             <Route path="mountainRout" element={<MountainRout />} />
             <Route path="contact" element={<Contact />} />
