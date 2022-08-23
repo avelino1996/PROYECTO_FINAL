@@ -12,8 +12,10 @@ require('dotenv').config();
 
 //middlewares
 app.use(morgan('dev'));
-app.use(bodyParser.json());
+/* app.use(bodyParser.json()); */
 app.use(cors()) //para react
+app.use(express.json({limit: "50mb"}));
+app.use(express.urlencoded({extended: true}));
 
 
 //database setup
@@ -25,6 +27,8 @@ mongoose.connect(process.env.DATABASE, {
 //routes setup
 app.use('/api/users', require("./routes/indexUser"));
 app.use('/api/publications', require("./routes/indexPublication"));
+app.use('/public/upload', express.static(`${__dirname}/public/upload`));
+
 
 
 //listen to port

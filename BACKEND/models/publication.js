@@ -21,18 +21,18 @@ let publicationSchema = new Schema(
             ref: "User",
             require: true
         },
-        create: {
+        createAt: {
             type: Date,
             required: true,
             default: Date.now
         },
-        /* photo:{
+        photo:{
             data: Buffer,
             contentType: String
-        } */
-        photo: {
-            type: String
         }
+       /*  photo: {
+            type: String
+        } */
     }
 );
 

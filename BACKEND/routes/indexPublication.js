@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { create, list} = require('../controllers/publicationControllers')
 
-router.get('/newsList', list);
+router.get('/publicationsList', list);
 router.post('/createPublication', create);
 
 
