@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 
 //use methods libs
 const app = express();
@@ -28,6 +27,7 @@ mongoose.connect(process.env.DATABASE, {
 app.use('/api/users', require("./routes/indexUser"));
 app.use('/api/publications', require("./routes/indexPublication"));
 app.use('/public/upload', express.static(`${__dirname}/public/upload`));
+
 
 
 

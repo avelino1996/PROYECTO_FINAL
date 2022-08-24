@@ -30,9 +30,6 @@ let publicationSchema = new Schema(
             data: Buffer,
             contentType: String
         }
-       /*  photo: {
-            type: String
-        } */
     }
 );
 
