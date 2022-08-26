@@ -11,6 +11,11 @@
 .btn-primary{
     text-align: center;
     margin: 0 auto;
+    background-color: rgb(255, 0, 0);
+    border-radius: 6px;
+    border: px solid black;
+    height: 2.2em;
+    width: 3.5em;
 }
 
 .s-btn{
