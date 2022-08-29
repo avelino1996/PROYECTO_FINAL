@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import {  Navigate } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
 import { signin, authenticate, isAuthenticated } from './apiCore'
 import "../components/login.css"
 
 
 export default function login() {
-  const navigate = useNavigate();
+  
 
     const [values, setValues] = useState({
       email: '',
@@ -73,17 +72,17 @@ export default function login() {
         </div>
         <div>
           registrarse
-          <button onClick={(e) => navigate('/CreateAccount')}>regrsitrarse</button>
+          <button onClick={(e) => <Navigate to="/CreateAccount" />}>registrarse</button>
         </div>
       </form>
     )
 
     const redirectUser = () => {
       if (redirectToReferrer) {
-        if (user && user.role === 1) {
+        if (user && user.role === "ADMIN") {
           return <Navigate to="/history" />
         } else {
-          return <Navigate to="/Contact" />
+          return <Navigate to="/login" />
         }
       }
       if (isAuthenticated()) {

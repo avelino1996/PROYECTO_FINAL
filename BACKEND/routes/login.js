@@ -25,12 +25,8 @@ router.post("/", (req, res) => {
                 error: {message: "Invalid password"}
             });
         } else {
-            const token = jwt.sign(
-                {user: userDB}, // payload
-                process.env.SEED,
-                {expiresIn: "24h"}
-            );
-
+            const token = jwt.sign({user: userDB}, process.env.SEED,);
+            res.cookie('t', token, {expiresIn: "1h"})
             res.status(200).json({ok: true, token, user: userDB});
         }
     })

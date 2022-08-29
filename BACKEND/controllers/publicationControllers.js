@@ -5,9 +5,11 @@ const Publication = require('../models/publication')
 
 
 
-exports.list = (req, res) => {
 
-     publication.find({}, (error, publications) => {
+exports.list = (req, res) => {
+    
+
+     Publication.find({}, (error, publications) => {
         if (error) {
             res.status(400).json({ ok: false, error });
         } else {
@@ -20,7 +22,8 @@ exports.create = (req, res) => {
     let publication = new Publication();
     publication.tittle = req.body.tittle;
     publication.description = req.body.description;
-    publication.IdPublication = req.body.IdPublication
+    publication.distance = req.body.distance;
+    publication.createBy = req.body.createBy;
 
     if (req.body.photo != "") {
         const photo = req.body.photo;

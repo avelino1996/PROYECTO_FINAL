@@ -14,12 +14,15 @@ let publicationSchema = new Schema(
             type: String,
             unique: true,
             required: [true, "Description is required"],
-            maxlength: 20000
+            maxlength: 2000
         },
-         idPublication: {
-            type: Schema.ObjectId,
-            ref: "User",
-            require: true
+        distance:{
+            type: String,
+            require: [true, "Distance is required"]
+        },
+        createBy:{
+            type: String,
+            require: [true, "Name is required"]
         },
         createAt: {
             type: Date,

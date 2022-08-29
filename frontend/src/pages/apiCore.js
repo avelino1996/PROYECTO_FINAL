@@ -7,7 +7,7 @@ export const signin = user => {
         Accept: 'application/json',
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(user) // user: 
+      body: JSON.stringify(user)  
     })
       .then(response => {
         return response.json();
@@ -39,7 +39,7 @@ export const signin = user => {
     if (typeof window !== 'undefined') {
       localStorage.removeItem('jwt');
       next();
-      return fetch(`${API}/`, {
+      return fetch(`${API}/api/users/logOut`, {
         method: 'GET',
       })
         .then(response => {
