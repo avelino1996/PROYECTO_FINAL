@@ -2,6 +2,8 @@ import React from "react"
 
 export default function Card({ publication }) {
 
+
+
     //<button onClick={() => handleRedirect(publications.id)} className="btn btn-outline-success">Más información</button>
     return (
         <div className="container">

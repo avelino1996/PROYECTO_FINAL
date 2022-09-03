@@ -31,7 +31,7 @@ router.get("/testAdmin", verifyToken, verifyAdmin, async (req, res)  => {
     res.status(200).json({message: "you are an admin!!"});
 });
 
-router.post("/", (req, res) => {
+router.post("/create", (req, res) => {
     let body = req.body;
 
     const user = new User({

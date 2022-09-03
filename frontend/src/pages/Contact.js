@@ -1,14 +1,16 @@
 import React from "react";
+import Navigation from './Navigation';
 
- const Contact = () => {
+export function Contact(){
   
     return (
-      
-        <div >
+
+      <>
+      <Navigation/>
+      <div >
         <h1>Hola Contactos</h1>
       </div>
-     
-
+      </>
+      
     )
 }
-export default Contact;

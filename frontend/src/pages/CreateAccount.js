@@ -1,5 +1,6 @@
 import React from 'react'
 import "../components/login.css"
+import Navigation from './Navigation';
 
 export default function CreateAcoount() {
 
@@ -33,6 +34,7 @@ export default function CreateAcoount() {
   )
   return (
     <>
+    <Navigation/>
     {signUpForm()}
     </>
    
