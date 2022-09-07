@@ -1,6 +1,5 @@
 import { API } from '../config';
 
-
 export const signin = user => {
   return fetch(`${API}/api/users/login`, {
     method: "POST",

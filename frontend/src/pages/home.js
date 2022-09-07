@@ -1,35 +1,34 @@
 import React from "react"
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
-import { URL_PUBLICATIONS } from "../config";
+//import { getPublications } from "./apiCore";
 import Navigation from './Navigation';
+import { URL_PUBLICATIONS } from "../config";
 
 export function Home() {
 
-  const [publication, setPublication] = useState([]);
+  const [publicationsData, setPublicationsData] = useState([]);
+  //const [error, setError] = useState(false);
 
- 
+  const URLpubli = `${URL_PUBLICATIONS}/publicationsList`
+
   useEffect(() => {
-    fetch(URL_PUBLICATIONS + "/publicationsList")
-      .then(response => response.json())
-      .then(data => {
-        setPublication(data.results)
-      });
-
-  }, []);
-  console.log(setPublication());
+    fetch(URLpubli)
+        .then(response => response.json())
+        .then(data => {
+            setPublicationsData(data.publications)
+        });
+}, []);
 
   return (
-    <> 
-    <Navigation/>
-      <div className="pt-5 pb-5 flex-grow-1">
-      <h1 className="text-center mb-5">Rutas realizadas</h1>
 
-      <div className="container d-flex flex-wrap">
-        {publication && publication.map(publication => <Card key={publication.description} publication={publication} />)}
-      </div>
+
+    <div>
+      <Navigation/>
+      
+      {publicationsData && publicationsData.map(publication => <Card key={publication._id} publicationsData={publication} />)}
+      
     </div>
-    </>
- 
   )
 }
+

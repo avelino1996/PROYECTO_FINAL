@@ -26,6 +26,7 @@ mongoose.connect(process.env.DATABASE, {
 //routes setup
 app.use('/api/users', require("./routes/indexUser"));
 app.use('/api/publications', require("./routes/indexPublication"));
+app.use('/api/routes', require("./routes/indexClubRoutes"));
 app.use('/public/upload', express.static(`${__dirname}/public/upload`));
 
 
