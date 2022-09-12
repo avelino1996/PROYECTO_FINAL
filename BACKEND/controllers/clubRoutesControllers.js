@@ -19,11 +19,13 @@ exports.create = (req, res) => {
     let rout = new Routs();
     rout.tittle = req.body.tittle;
     rout.description = req.body.description;
+    rout.dayAt = req.body.dayAt;
     rout.distance = req.body.distance;
+    
 
     if (req.body.photo != "") {
         const photo = req.body.photo;
-        const fileName = Math.random().toString() + ".jpg";
+        const fileName = req.body.tittle + ".jpg";
 
         fs.writeFile("public/upload/" + fileName, photo, 'base64', (error) => {
             rout.save((error, savedRout) => {

@@ -1,6 +1,6 @@
 import React from "react"
 import { useState, useEffect } from "react";
-import Card from "../components/Card";
+import CardPublication from "../components/CardPublication";
 //import { getPublications } from "./apiCore";
 import Navigation from './Navigation';
 import { URL_PUBLICATIONS } from "../config";
@@ -26,7 +26,7 @@ export function Home() {
     <div>
       <Navigation/>
       
-      {publicationsData && publicationsData.map(publication => <Card key={publication._id} publicationsData={publication} />)}
+      {publicationsData && publicationsData.map(publication => <CardPublication key={publication._id} publicationsData={publication} />)}
       
     </div>
   )

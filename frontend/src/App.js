@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/home';
 import { History } from './pages/history';
 import { Contact } from './pages/Contact';
-import MountainRout from './pages/mountainRout'
+import { MountainRout } from './pages/mountainRout'; 
 import Login from './pages/Login'
 import CreateAcount from './pages/CreateAccount'
 

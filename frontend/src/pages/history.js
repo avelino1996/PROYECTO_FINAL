@@ -7,7 +7,15 @@ export function History(){
       <>
       <Navigation/>
        <div >
-        <h1>Hola historia</h1>
+        <h1>Historia del club</h1>
+        <div>
+        <div>
+          lasdhbvlsdfhbvl idhfbv lifbv
+        </div>
+        <div>
+          iqjsdlkn oaisdbobdv oibdvoubefv
+        </div>
+        </div>
       </div>
       </>
      

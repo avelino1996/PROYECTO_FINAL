@@ -23,6 +23,7 @@ export default function login() {
     const handleChange = name => event => {
       setValues({ ...values, error: false, [name]: event.target.value })
     }
+    
 
     const clickSubmit = (event) => {
       event.preventDefault();
@@ -81,10 +82,11 @@ export default function login() {
 
     const redirectUser = () => {
       if (redirectToReferrer) {
-        if (user && user.role === 1) {
-          return <Navigate to="/login" />
-        } else {
+        if (user && user.role === "ADMIN") {
+          console.log(user);
           return <Navigate to="/" />
+        } else {
+          return <Navigate to="/mountainRout" />
         }
       }
       if (isAuthenticated()) {

@@ -20,6 +20,14 @@ let routSchema = new Schema(
             type: String,
             require: [true, "Distance is required"]
         },
+        dayAt:{
+            type: String,
+            require: [true, "Day is required"]
+        },
+        routeNumber: {
+            type: String,
+            require: true
+          },
         photo:{
             data: Buffer,
             contentType: String

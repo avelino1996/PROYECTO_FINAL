@@ -5,6 +5,7 @@ let Schema = mongoose.Schema;
 
 let publicationSchema = new Schema(
     {
+
         tittle:{
             type: String,
             require: [true, "Tittle is required"],
@@ -29,6 +30,10 @@ let publicationSchema = new Schema(
             required: true,
             default: Date.now
         },
+        publicationNumber: {
+            type: String,
+            require: true
+          },
         photo:{
             data: Buffer,
             contentType: String
