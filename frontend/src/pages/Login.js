@@ -81,10 +81,10 @@ export default function login() {
     )
 
     const redirectUser = () => {
+      console.log("redirectUser", user);
       if (redirectToReferrer) {
         if (user && user.role === "ADMIN") {
-          console.log(user);
-          return <Navigate to="/" />
+          return <Navigate to="/AdminPanel" />
         } else {
           return <Navigate to="/mountainRout" />
         }

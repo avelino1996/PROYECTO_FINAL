@@ -6,8 +6,11 @@ import { Contact } from './pages/Contact';
 import { MountainRout } from './pages/mountainRout'; 
 import Login from './pages/Login'
 import CreateAcount from './pages/CreateAccount'
+import {AdminPanel} from './pages/AdminPanel';
+import { ProtectedRoute } from './pages/apiCore';
 
 export default function App() {
+
   return (
     <div>
       <div className='App-header'>
@@ -23,6 +26,7 @@ export default function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="Login" element={<Login />} />
             <Route path="CreateAccount" element={<CreateAcount />} />
+            <Route path="AdminPanel" element={<ProtectedRoute><AdminPanel /></ProtectedRoute>} />
 
           </Routes>
 

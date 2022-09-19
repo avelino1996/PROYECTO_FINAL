@@ -2,10 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavItem } from "reactstrap";
 
-import { isAuthenticated, signout } from "./apiCore";
+import { isAuthenticated, signout, useUser } from "./apiCore";
 
-export default  function Navigation(history) {
-  
+
+export default function Navigation(history) {
+
+  const user = useUser();
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,23 +34,23 @@ export default  function Navigation(history) {
               </NavItem>
             </ul>
             <ul className="navbar-nav">
+              <NavItem className="nav-link">
+                <Link className="nav-link" to="/history">
+                  Historia
+                </Link>
+              </NavItem>
+              <NavItem className="nav-link">
+                <Link className="nav-link" to="/mountainRout">
+                  Rutas del club
+                </Link>
+              </NavItem>
+              <NavItem className="nav-link">
+                <Link className="nav-link" to="/Contact">
+                  Contacto
+                </Link>
+              </NavItem>
               {!isAuthenticated() && (
                 <>
-                  <NavItem className="nav-link">
-                    <Link className="nav-link" to="/history">
-                      Historia
-                    </Link>
-                  </NavItem>
-                  <NavItem className="nav-link">
-                    <Link className="nav-link" to="/mountainRout">
-                      Rutas del club
-                    </Link>
-                  </NavItem>
-                  <NavItem className="nav-link">
-                    <Link className="nav-link" to="/Contact">
-                      Contacto
-                    </Link>
-                  </NavItem>
                   <NavItem className="nav-link">
                     <Link className="nav-link" to="/Login">
                       Login
@@ -60,28 +63,21 @@ export default  function Navigation(history) {
                   </NavItem>
                 </>
               )}
-              { isAuthenticated() && (
+              {isAuthenticated() && (
                 <>
-                  <NavItem className="nav-link">
-                    <Link className="nav-link" to="/history">
-                      Historia
-                    </Link>
-                  </NavItem>
-                  <NavItem className="nav-link">
-                    <Link className="nav-link" to="/mountainRout">
-                      Rutas del club
-                    </Link>
-                  </NavItem>
-                  <NavItem className="nav-link">
-                    <Link className="nav-link" to="/">
-                      Contacto
-                    </Link>
-                  </NavItem>
+                  {
+                    user.role === "ADMIN" &&
+                    <NavItem className="nav-link">
+                      <Link
+                        to="/adminPanel" className="nav-link">
+                        Admin Panel                    </Link>
+                    </NavItem>
+                  }
                   <NavItem className="nav-link">
                     <Link
                       to="/"
                       onClick={() => signout()
-                        } className="nav-link">
+                      } className="nav-link">
                       Logout
                     </Link>
                   </NavItem>

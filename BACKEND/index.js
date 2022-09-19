@@ -24,6 +24,7 @@ mongoose.connect(process.env.DATABASE, {
 }).then(() => {console.log("Estás conectado a la base de datos");} )
 
 //routes setup
+
 app.use('/api/users', require("./routes/indexUser"));
 app.use('/api/publications', require("./routes/indexPublication"));
 app.use('/api/routes', require("./routes/indexClubRoutes"));

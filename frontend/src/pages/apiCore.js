@@ -1,4 +1,7 @@
+import React from "react"
+import { Navigate } from 'react-router';
 import { API } from '../config';
+
 
 
 export const signin = user => {
@@ -66,3 +69,22 @@ export const isAuthenticated = () => {
   }
     return false;
 }
+
+export const useUser = () => {
+  const jwt = JSON.parse(localStorage.getItem('jwt'))
+
+  if (jwt) {
+    return jwt.user
+  }
+
+  return undefined
+}
+ export const ProtectedRoute = ({children})=>{
+  const user = useUser();
+
+  if(!user || (user && user.role !== "ADMIN")){
+    return <Navigate to="/login"></Navigate>
+  }
+
+  return children
+ }
