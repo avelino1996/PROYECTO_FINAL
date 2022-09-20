@@ -1,5 +1,3 @@
-const formidable = require('formidable');
-const _ = require('lodash');
 const fs = require('fs')
 const Publication = require('../models/publication')
 
@@ -42,5 +40,34 @@ exports.create = (req, res) => {
             });
         });
     } 
+}
+
+exports.remove = (req, res) => {
+    let publication = req.publication
+    publication.remove((error, deletedPublication) => {
+        if (error) {
+            res.status(400).json({ ok: false, error });
+        } else {
+            res.status(201).json({ ok: true, deletedPublication });
+        }
+    })
+  }
+
+exports.publicationById = (req, res) => {
+    const id = req.params.id;
+    const body = ramda.pick(["tittle", "description", "distance", "createBy", "publicationNumber", "publication.photo"], req.body);
+    
+    Publication.findByIdAndUpdate(
+        id,
+        body,
+        { new: true, runValidators: true, context: 'query' }, 
+        (error, updatedPublication) => {
+            if(error) {
+                res.status(400).json({ok: false, error});
+            } else {
+                res.status(200).json({ok: true, updatedPublication});
+            }
+        }
+    );
 }
 
