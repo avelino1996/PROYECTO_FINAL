@@ -38,6 +38,59 @@ export const signup = user => {
     })
 };
 
+export const createPublication = publication => {
+  return fetch(`${API}/api/publications/createPublication`, { 
+    method: "POST",
+    headers: {
+      Accept: 'application/json',
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(publication)
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => {
+      console.log(err);
+    })
+};
+
+export const coments = coment => {
+  
+  return fetch(`${API}/api/coment/createComent`, { 
+    method: "POST",
+    headers: {
+      Accept: 'application/json',
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(coment)
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => {
+      console.log(err);
+    })
+};
+
+export const deletedComents = coment => {
+  
+  return fetch(`${API}/api/coment/:id`, { 
+    method: "DELETE",
+    headers: {
+      Accept: 'application/json',
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(coment)
+  })
+    .then(response => {
+      return response.json();
+    })
+    .catch(err => {
+      console.log(err);
+    })
+};
+
 export const authenticate = (data, next) => {
   if(typeof window !== 'undefined') {
     localStorage.setItem('jwt', JSON.stringify(data));

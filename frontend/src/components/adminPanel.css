@@ -1,0 +1,9 @@
+.lateralNav{
+    margin-left: 1em;
+    display:block;
+    justify-content:space-between;
+}
+
+.componentNav{
+    margin-top: 1em;
+}

@@ -14,20 +14,20 @@ export function Home() {
 
   useEffect(() => {
     fetch(URLpubli)
-        .then(response => response.json())
-        .then(data => {
-            setPublicationsData(data.publications)
-        });
-}, []);
+      .then(response => response.json())
+      .then(data => {
+        setPublicationsData(data.publications)
+      });
+  }, []);
 
   return (
 
 
     <div>
-      <Navigation/>
-      
+      <Navigation />
+
       {publicationsData && publicationsData.map(publication => <CardPublication key={publication._id} publicationsData={publication} />)}
-      
+
     </div>
   )
 }
