@@ -1,0 +1,13 @@
+.routesClub{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 680px){
+    .routesClub{
+        display: grid;
+        padding: 2em;
+     }
+
+ }
+

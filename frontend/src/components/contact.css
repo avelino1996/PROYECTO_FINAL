@@ -1,0 +1,87 @@
+.formContactParent{
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+
+}
+.formContact{
+    margin: 1em;
+    width: 40%;
+    border-radius: 0.8em;
+    border: 0.5px solid rgb(170, 145, 145);
+    box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
+}
+.formContactChild{
+    margin: 0 1em 0 1em ;
+   
+}
+.tittleForm{
+    margin: 1em;
+    text-align: center;
+}
+
+.labelForm{
+
+}
+.inputForm{
+    margin: auto;
+    border: 1.5px solid rgb(170, 145, 145);
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.lastInputForm{
+    border: 1.5px solid rgb(170, 145, 145);
+    border-radius: 4px;
+    width: 100%;
+    height: 3em;
+    text-align:start;
+    font-size: small;
+}
+
+.chats{
+    display: grid;
+    justify-content: space-around;
+    margin: 1em;
+    width: 50%;
+}
+.chatsChild{
+    display: flex;
+    justify-content: space-between;
+}
+.logoFace{
+    text-decoration: none;
+
+}
+.logoInsta{
+    text-decoration: none;
+}
+
+
+.buttonForm{
+    margin: 1em 0 1em 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.4em;
+    border: 1.5px solid rgb(170, 145, 145);
+    background-color: rgb(88, 87, 87);
+}
+
+
+@media only screen and (max-width: 680px){
+    .formContactParent{
+        display: grid;
+     }
+     .formContact{
+        margin: 1em;
+        width: auto;
+        border-radius: 0.8em;
+        border: 0.5px solid rgb(170, 145, 145);
+        box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
+    }
+     .chats{
+        margin: 1em;
+        width: auto;
+    }
+
+ }

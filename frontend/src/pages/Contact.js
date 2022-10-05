@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navigation from './Navigation';
 import { coments } from './apiCore';
+import "../components/contact.css"
 
 
 export default function Contact() {
@@ -38,48 +39,69 @@ export default function Contact() {
   }
 
   const comentForm = () => (
-    <form >
-      <h2 >
-        Contacta con nosotros
-      </h2>
-      <div >
-        <label >Nombre</label>
-        <input
-          onChange={handleChange('name')}
-          type="name"
-          value={name}
-        />
+    <div className='formContactParent'>
+      <form className='formContact'>
+        <h2 className='tittleForm'>
+          Contacta con nosotros
+        </h2>
+        <div className='formContactChild'>
+          <label className='labelForm' >Nombre</label>
+          <input
+            className='inputForm'
+            onChange={handleChange('name')}
+            type="name"
+            value={name}
+          />
+        </div>
+        <div className='formContactChild'>
+          <label className='labelForm'>Apellidos</label>
+          <input
+            className='inputForm'
+            onChange={handleChange('surname')}
+            type="surname"
+            value={surname}
+          />
+        </div>
+        <div className='formContactChild'>
+          <label className='labelForm' >Email</label>
+          <input
+            className='inputForm'
+            onChange={handleChange('email')}
+            type="email"
+            value={email}
+          />
+        </div>
+        <div className='formContactChild'>
+          <label className='labelForm' >Deja tu comentario aqui</label>
+          <input
+            className='lastInputForm'
+            onChange={handleChange('description')}
+            type="description"
+            value={description}
+          />
+        </div>
+        <div className='formContactChild'>
+          <button className='buttonForm' onClick={clickSubmit}>
+            Enviar
+          </button>
+        </div>
+      </form>
+      <div className='chats'>
+        <div className='chatsChild'>
+          <div className='logoFace'>
+            <h5>Enlace a nuestra cuenta de Facebook</h5>
+            <img src="https://cdn-icons-png.flaticon.com/64/1051/1051360.png" alt="" />
+          </div>
+          <div className='logoInsta'>
+            <h5>Enlace a nuestra cuenta de Instagram</h5>
+            <img src="https://cdn-icons-png.flaticon.com/64/87/87390.png" alt="" />
+          </div>
+        </div>
+        <div>
+          <h5>Dirección</h5>
+        </div>
       </div>
-      <div >
-        <label>Apellidos</label>
-        <input
-          onChange={handleChange('surname')}
-          type="surname"
-          value={surname}
-        />
-      </div>
-      <div >
-        <label >Email</label>
-        <input
-          onChange={handleChange('email')}
-          type="email"
-          value={email}
-        />
-      </div>
-      <div >
-        <label placeholder='Dejanos tu comentario aquí para contactar contigo'></label>
-        <input
-          onChange={handleChange('description')}
-          type="description"
-          value={description}
-        />
-      </div>
-      <div>
-        <button onClick={clickSubmit}>
-          Enviar
-        </button>
-      </div>
-    </form>
+    </div>
   )
 
   const showError = () => (

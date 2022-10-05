@@ -1,0 +1,6 @@
+.addRow{
+    margin-top: 1em;
+    display: grid;
+    justify-content: space-around;
+    width: auto;
+}

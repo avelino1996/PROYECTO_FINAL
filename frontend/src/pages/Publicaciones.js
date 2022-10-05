@@ -4,6 +4,7 @@ import { URL_PUBLICATIONS } from "../config";
 import axios from "axios"
 import { Link, Route, Routes } from "react-router-dom";
 import AddPublication from "./AddPublication";
+import "../components/publicaciones.css"
 
 export function Publicaciones() {
 
@@ -26,9 +27,9 @@ export function Publicaciones() {
       };
 
     return (
-        <div>
+        <div className="addForm">
            <div>
-               <Link to="addPublication">Añadir Publicación</Link>
+               <Link  className="tittle" to="addPublication">Añadir Publicación</Link>
            </div>
            <div>
             <Routes>

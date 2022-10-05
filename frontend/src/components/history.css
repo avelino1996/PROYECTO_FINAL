@@ -1,0 +1,14 @@
+.history{
+    margin: 1em;
+}
+
+.childHistory{
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+.textHistory{
+    text-align:justify ;
+   margin: 1em;
+}

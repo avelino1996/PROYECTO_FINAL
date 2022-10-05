@@ -1,0 +1,13 @@
+.footer{
+    position: absolute;
+    background-color: rgb(33, 37, 31);
+    height: 4em;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 1em 0;
+}
+.textFooter{
+
+}

@@ -15,20 +15,20 @@ export function AdminPanel() {
     <div>
       <Navigation />
 
-      <div>
+      <div className="adminPanel">
         <div>
-          <nav>
-            <li>
-              <Link to="publications">Publicaciones</Link>
+          <nav className="lateralNav">
+            <li className="componentNav">
+              <Link className="linkNav" to="publications">Publicaciones</Link>
             </li>
-            <li>
-              <Link to="users">Usuarios</Link>
+            <li className="componentNav">
+              <Link className="linkNav" to="users">Usuarios</Link>
             </li>
-            <li>
-              <Link to="routesClub">Rutas del club</Link>
+            <li className="componentNav">
+              <Link className="linkNav" to="routesClub">Rutas del club</Link>
             </li>
-            <li>
-              <Link to="coments">Comentarios</Link>
+            <li className="componentNav">
+              <Link className="linkNav" to="coments">Comentarios</Link>
             </li>
           </nav>
         </div>

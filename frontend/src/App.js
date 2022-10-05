@@ -8,6 +8,7 @@ import Login from './pages/Login'
 import CreateAcount from './pages/CreateAccount'
 import { AdminPanel } from './pages/AdminPanel';
 import { ProtectedRoute } from './pages/apiCore';
+import Footer from './pages/footer';
 
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="AdminPanel/*" element={<ProtectedRoute><AdminPanel /></ProtectedRoute>} />
 
           </Routes>
+          <Footer/>
 
         </BrowserRouter>
       </div>

@@ -2,8 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { URL_PUBLICATIONS } from '../config';
 import axios from 'axios';
+import "../components/addPublication.css"
+import { useUser } from './apiCore';
+
+
 
 const AddPublication = () => {
+  const user = useUser();
   const navigate = useNavigate();
   const [values, setValues] = useState({
     tittle: '',
@@ -42,11 +47,13 @@ const AddPublication = () => {
 
   const clickSubmit = async (event) => {
     event.preventDefault()
+    console.log("creadndo publicacion", `${URL_PUBLICATIONS}/createPublication`);
     await axios.post(`${URL_PUBLICATIONS}/createPublication`, values);
+    
   }
 
   const newPublicationForm = () => (
-    <form className='mb-3' onSubmit={clickSubmit}>
+    <form className='mb-3' >
       <h4>Añadir Foto</h4>
       <div className='form-group'>
         <label className='btn btn-secondary'>
@@ -104,7 +111,7 @@ const AddPublication = () => {
           value={publicationNumber}
         />
       </div>
-      <button className='btn btn-outline-primary' onSubmit={clickSubmit} onClick={(e) => navigate('publications')}>Crear publicación</button>
+      <button className='btn btn-outline-primary' onClick={clickSubmit}>Crear publicación</button>
     </form>
   )
 
@@ -126,10 +133,10 @@ const AddPublication = () => {
 
   return (
     <>
-      <div className="conatiner mt-5">
-        <div className="row">
+      <div className="formContainer">
+        <div className="addRow">
           <div className="col-md-8 offset-md-2">
-            <h2>Añadir Publicación</h2>
+          {user.role === "ADMIN" && `Hola ${user.username}, bienvenida al panel de administración`}
             {showLoading()}
             {showError()}
             {newPublicationForm()}

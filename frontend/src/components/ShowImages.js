@@ -1,14 +1,14 @@
 import React from 'react';
 import { API} from '../config';
+import "./showImage.css"
 
 const ShowImage = ({item, url}) => (
     item ? 
-  <div className="product-img">
+  <div className="parentImage">
     <img
       src={`${API}/${url}/${item}.jpg`}
       alt={item}
-      className="mb-3 img-cont"
-      style={{maxHeight: "600px", maxWidth:"300px"}}/>
+      className="image"/>
   </div> : 
   console.log("error")
 )
