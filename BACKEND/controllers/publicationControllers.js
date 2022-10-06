@@ -27,8 +27,8 @@ exports.create = (req, res) => {
     if (req.body.photo != "") {
         const photo = req.body.photo;
         const fileName = req.body.publicationNumber  + ".jpg";
-
-        fs.writeFile("public/upload/" + fileName, photo, 'base64', (error) => {
+        const buffer = Buffer.from(photo.split(",")[1], "base64")
+        fs.writeFile("public/upload/" + fileName, buffer, (error) => {
             publication.save((error, savedPublication) => {
                 if (error) {
                     res.status(400).json({ ok: false, error });

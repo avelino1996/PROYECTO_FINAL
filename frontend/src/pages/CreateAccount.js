@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation'
+import "../components/login&create.css"
 
 import "../components/Signup.css"
 import { signup } from './apiCore';
@@ -41,35 +42,41 @@ const Signup = () => {
   }
 
   const signUpForm = () => (
-    <form className="sign-box">
-      <div className='form-group'>
-        <label className='text-muted'>Name</label>
-        <input
-          onChange={handleChange('username')}
-          value={username}
-          type='text'
-          className='form-control'/>
-      </div>
-      <div className='form-group'>
-        <label className='text-muted'>email</label>
-        <input
-          onChange={handleChange('email')}
-          type='email'
-          value={email}
-          className='form-control'/>
-      </div>
-      <div className='form-group'>
-        <label>Password</label>
-        <input
-          onChange={handleChange('password')}
-          value={password}
-          type='password'
-          className='form-control'/>
-      </div>
-      <button onClick={clickSubmit} className='btn btn-primary'>
-        Sign Up
-      </button>
-    </form>
+    <div className='parentCreateForm'>
+      <form className="formCreateBox">
+        <h2 className="control-text">Registrarse
+        </h2>
+        <div className='control-form'>
+          <label className='text-muted'>Name</label>
+          <input
+            onChange={handleChange('username')}
+            value={username}
+            type='text'
+            className='inputForm'/>
+        </div>
+        <div className='control-form'>
+          <label className='text-muted'>Email</label>
+          <input
+            onChange={handleChange('email')}
+            type='email'
+            value={email}
+            className='inputForm'/>
+        </div>
+        <div className='control-form'>
+          <label className='text-muted'>Password</label>
+          <input
+            onChange={handleChange('password')}
+            value={password}
+            type='password'
+            className='inputForm'/>
+        </div>
+        <div className='buttons'>
+          <button onClick={clickSubmit} className='buttonForm'>
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
   );
 
   const showError = () => (
@@ -87,12 +94,10 @@ const Signup = () => {
   return (
     <>
       <Navigation/>
-      <div className="mt-5">
-        <h4 className="text-center mb-5">Signup form</h4>
         {showError()}
         {showSuccess()}
         {signUpForm()}
-      </div>
+      
     </>
   )
 }

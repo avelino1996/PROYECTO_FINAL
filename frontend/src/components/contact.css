@@ -1,15 +1,22 @@
 .formContactParent{
-    margin: 1em;
+    margin: 0;
     display: flex;
     justify-content: space-around;
+    background-image: url(/home/andres/Documentos/PROYECTO-FINAL/frontend/src/components/imagenes/topografiaGilena.png);
+    height: 100vh;
+    padding-top: 2em;
+    background-position: center;
+    background-size: cover;
+    
 
 }
 .formContact{
-    margin: 1em;
+    background-color: white;
+    margin-top: 1em;
+    height: 450px;
     width: 40%;
     border-radius: 0.8em;
-    border: 0.5px solid rgb(170, 145, 145);
-    box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
+    border: 0.5px solid rgb(199, 192, 192);
 }
 .formContactChild{
     margin: 0 1em 0 1em ;
@@ -21,17 +28,25 @@
 }
 
 .labelForm{
-
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(255, 0, 0);
+    border-radius: 6px;
+    border: px solid black;
+    height: 2.2em;
+    width: 4em;
+    text-align: center;
 }
+
 .inputForm{
     margin: auto;
-    border: 1.5px solid rgb(170, 145, 145);
+    border: 0.2px solid rgb(199, 192, 192);
     border-radius: 4px;
     width: 100%;
     margin-bottom: 1em;
 }
 .lastInputForm{
-    border: 1.5px solid rgb(170, 145, 145);
+    border: 0.2px solid rgb(199, 192, 192);
     border-radius: 4px;
     width: 100%;
     height: 3em;
@@ -40,23 +55,26 @@
 }
 
 .chats{
+    background-color: white;
+    border: 0.5px solid rgb(199, 192, 192);
+    border-radius: 0.8em;
     display: grid;
     justify-content: space-around;
     margin: 1em;
+    padding: 1em;
     width: 50%;
+    height: 450px;
 }
 .chatsChild{
     display: flex;
     justify-content: space-between;
 }
-.logoFace{
-    text-decoration: none;
+.logo{
+    width: 50%;
+    padding: 1.5em;
+    text-align: center;
 
 }
-.logoInsta{
-    text-decoration: none;
-}
-
 
 .buttonForm{
     margin: 1em 0 1em 0;
@@ -65,6 +83,10 @@
     border-radius: 0.4em;
     border: 1.5px solid rgb(170, 145, 145);
     background-color: rgb(88, 87, 87);
+}
+.textDirection{
+   padding-top: 4em;
+   text-align: center;
 }
 
 
@@ -75,13 +97,24 @@
      .formContact{
         margin: 1em;
         width: auto;
+        height: auto;
         border-radius: 0.8em;
-        border: 0.5px solid rgb(170, 145, 145);
+        border: 0.5px solid rgb(199, 192, 192);
         box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
     }
      .chats{
         margin: 1em;
+        padding: 0.8em;
         width: auto;
+        height: auto;
+        box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
+        border: 0.5px solid rgb(199, 192, 192);
     }
+    .tittleForm{
+        font-size: 2rem;
+    }
+    .textDirection{
+        padding-top: 0.5em;
+     }
 
  }

@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import {  Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { signin, authenticate, isAuthenticated } from './apiCore'
-import "../components/login.css"
+import "../components/login&create.css"
 import Navigation from './Navigation';
 
 
-export default function login() {
+export default function Login() {
   const navigate = useNavigate();
 
     const [values, setValues] = useState({
@@ -46,38 +46,41 @@ export default function login() {
     }
 
     const signInForm = () => (
-      <form className='sign-box'>
-        <h2 className='control-text'>
-          Iniciar sesión
-        </h2>
-        <div className='control-form'>
-          <label className='text-muted'>Email</label>
-          <input 
-           onChange={handleChange('email')}
-           type="email"
-           className="form-control"
-           value={email}
-           />
-        </div>
-        <div className='control-form'>
-          <label className='text-muted'>Password</label>
-          <input 
-          onChange={handleChange('password')}
-          type="password"
-          className="form-control"
-          value={password}
-          />
-        </div>
-        <div className='control-form'>
-          <button onClick={clickSubmit} className='btn btn-primary'>
-            Entrar
-          </button>
-        </div>
-        <div>
-          registrarse
-          <button onClick={(e) => navigate('/CreateAccount')}>regrsitrarse</button>
-        </div>
-      </form>
+      <div className='parentLoginForm'>
+        <form className='formLoginBox'>
+          <h2 className='control-text'>
+            Iniciar sesión
+          </h2>
+          <div className='control-form'>
+            <label className='text-muted'>Email</label>
+            <input
+             onChange={handleChange('email')}
+             type="email"
+             className="inputForm"
+             value={email}
+             />
+          </div>
+          <div className='control-form'>
+            <label className='text-muted'>Password</label>
+            <input
+            onChange={handleChange('password')}
+            type="password"
+            className="inputForm"
+            value={password}
+            />
+          </div>
+          <div className='buttons'>
+            <div >
+              <button onClick={clickSubmit} className='buttonForm'>
+                Entrar
+              </button>
+            </div>
+            <div>
+              <button className='buttonForm' onClick={(e) => navigate('/CreateAccount')}>Registrarse</button>
+            </div>
+          </div>
+        </form>
+      </div>
     )
 
     const redirectUser = () => {

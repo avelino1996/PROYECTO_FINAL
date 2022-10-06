@@ -20,7 +20,7 @@ export default function App() {
       </div>
       <div >
         <BrowserRouter>
-
+          
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="history" element={<History />} />

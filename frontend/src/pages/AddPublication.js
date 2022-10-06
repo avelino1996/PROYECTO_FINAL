@@ -40,15 +40,30 @@ const AddPublication = () => {
  
 
   const handleChange = name => event => {
-    const value = name === 'photo' ? event.target.files[0] : event.target.value
-    formData.set(name, value)
-    setValues({ ...values, [name]: value })
+    let value = null;
+    if (name==="photo") {
+      value = event.target.files[0] 
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        console.log(reader.result);
+        formData.set(name, reader.result)
+        setValues({ ...values, [name]: reader.result })
+      }
+      reader.readAsDataURL(value)
+  }else{
+   value =  event.target.value
+   formData.set(name, value)
+   setValues({ ...values, [name]: value })
+  }
+
+
   }
 
   const clickSubmit = async (event) => {
     event.preventDefault()
     console.log("creadndo publicacion", `${URL_PUBLICATIONS}/createPublication`);
     await axios.post(`${URL_PUBLICATIONS}/createPublication`, values);
+    event.preventDefault()
     
   }
 
