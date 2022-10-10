@@ -1,5 +1,6 @@
 .addForm {
-    
+    display: grid;
+    justify-content: space-around;
     width: auto;
     margin-top: 1.5em;
 }
@@ -11,4 +12,8 @@
     color: black;
     font-size:x-large
     
+}
+.publicationsList{
+    display: flex;
+    justify-content: space-between;
 }

@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router";
 import { Publicaciones } from './Publicaciones';
 import Usuarios from './Usuarios';
 import {Routesclubs} from './RoutesClubs';
-import Comentarios from './Comentarios';
+import {Comentarios} from './Comentarios';
 import { Link } from "react-router-dom";
 
 

@@ -39,7 +39,7 @@ export function Publicaciones() {
 
 
             {publicationsData && publicationsData.map(publication =>
-                <div>
+                <div className="publicationsList">
                     <h3>{publication.tittle}</h3>
                     <p>{publication.description}</p>
                     <button>Editar</button>

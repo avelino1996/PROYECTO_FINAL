@@ -1,0 +1,27 @@
+.list{
+    margin-top: 1.5em;
+    margin-left: 2em;
+}
+
+
+.comentsList{
+    display: grid;
+    justify-content: space-around;
+    width: 20em;
+    
+}
+.coments{
+    display: flex;
+    justify-content: space-between;
+    width: 20em;
+}
+.tittle{
+    margin-left: auto;
+    text-decoration: none;
+    color: black;
+    font-family: var(--bs-body-font-family);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    text-align: var(--bs-body-text-align);
+    font-size:x-large;
+}
