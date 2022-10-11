@@ -1,32 +1,24 @@
 import React from "react"
-import { useState, useEffect } from "react";
-import { URL_ROUTES } from "../config";
+import { Link, Route, Routes } from "react-router-dom";
+import AddRouteClub from "./AddRouteClub";
+import { RouteClub } from "./RouteClub";
+import "../components/routesClubs.css"
 
 export function Routesclubs() {
 
-  const [routesData, setRoutesData] = useState([]);
-
-  const URLroutes = `${URL_ROUTES}/routesList`
-
-  useEffect(() => {
-    fetch(URLroutes)
-        .then(response => response.json())
-        .then(data => {
-            setRoutesData(data.routs)
-        });
-}, []);
-
   return (
-    <div>
-      <button>Agregar Ruta</button>
-      {routesData && routesData.map(route =>
-         <div>
-         <h3>{route.tittle}</h3>
-         <p>{route.description}</p>
-         <button>Borrar</button>
-     </div>
-        )}
-      
+    <div className="addForm">
+      <div className="routes">
+        <Link className="tittle" to="AddRouteClub">Añadir Ruta</Link>
+        <Link className="tittle" to="RouteClub">Rutas</Link>
+
+      </div>
+      <div>
+        <Routes>
+          <Route path="AddRouteClub" element={<AddRouteClub />} />
+          <Route path="RouteClub" element={<RouteClub />} />
+        </Routes>
+      </div>
     </div>
   )
 }
