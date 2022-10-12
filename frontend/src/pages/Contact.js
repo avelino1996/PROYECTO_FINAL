@@ -22,6 +22,17 @@ export default function Contact() {
     setValues({ ...values, error: false, [name]: event.target.value })
   }
 
+  const limpiarFormulario = () => {
+    
+    setValues({ name: '',
+    email: '',
+    surname: '',
+    description: '',
+    error: '',
+    loading: false })
+  
+  }
+
 
   const clickSubmit = (event) => {
     event.preventDefault();
@@ -35,13 +46,15 @@ export default function Contact() {
           setValues({
             ...values
           })
+          limpiarFormulario();
         }
       })
+      
   }
 
   const comentForm = () => (
     <div className='formContactParent'>
-      <form className='formContact'>
+      <form id='myFormContact' className='formContact'>
         <h3 className='tittleForm'>
           Contacta con nosotros
         </h3>

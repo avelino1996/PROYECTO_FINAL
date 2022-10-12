@@ -9,20 +9,17 @@ const User = require("../models/user")
 const {verifyToken, verifyAdmin} = require("../middlewares/auth");
 
 
-router.get("/", verifyToken, async (req, res)  => {
-    const PAGE_SIZE = 2;
-    const page = req.query.page || 1;
+router.get("/list", async (req, res)  => {
+    
 
     const count = await User.countDocuments();
     
     User.find({active: true})
-    .skip(( page - 1) * PAGE_SIZE)
-    .limit(PAGE_SIZE) 
     .exec((error, users) => {
         if(error) {
             res.status(400).json({ok: false, error});
         } else {
-            res.status(200).json({ok: true, page, pageSize: PAGE_SIZE, count, results: users});
+            res.status(200).json({ok: true, count, results: users});
         }
     })
 });
@@ -70,22 +67,14 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
     const id = req.params.id;
 
-    User.findByIdAndUpdate(
-        id,
-        {active: false},
-        { new: true, runValidators: true, context: 'query' },
-        (error, updatedUser) => {
-            if(error) {
-                res.status(400).json({ok: false, error});
-
-            } else if (!updatedUser){
-                res.status(400).json({ok: false, error: "User not found"});
-                
-            } else {
-                res.status(200).json({ok: true, updatedUser});
-            }
+    User.findByIdAndRemove(id, (error, removedUser) => {
+        if(error) {
+            res.status(400).json({ok: false, error});
+        } else {
+            res.status(200).json({ok: true, removedUser});
         }
-    );
+    });
 });
+
 
 module.exports = router;
