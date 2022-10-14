@@ -26,7 +26,7 @@ router.post("/", (req, res) => {
             });
         } else {
             const token = jwt.sign({user: userDB}, process.env.SEED,);
-            res.cookie('t', token, {expiresIn: "1h"})
+            res.cookie('t', token, {expiresIn: "24h"})
             res.status(200).json({ok: true, token, user: userDB});
         }
     })

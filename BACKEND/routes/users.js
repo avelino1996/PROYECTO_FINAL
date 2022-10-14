@@ -48,12 +48,12 @@ router.post("/create", (req, res) => {
 
 router.put("/:id", (req, res) => {
     const id = req.params.id;
-    const body = ramda.pick(["username", "email"], req.body);
+    const body = ramda.pick(["username", "email", "role"], req.body);
     
     User.findByIdAndUpdate(
         id,
         body,
-        { new: true, runValidators: true, context: 'query' }, // options
+        { new: true, runValidators: true, context: 'query' },
         (error, updatedUser) => {
             if(error) {
                 res.status(400).json({ok: false, error});
