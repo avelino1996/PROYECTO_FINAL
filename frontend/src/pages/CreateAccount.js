@@ -86,8 +86,8 @@ const Signup = () => {
   )
 
   const showSuccess = () => (
-    <div className='alert alert-info' style={{display: success ? '':'none'}}>  New Account Successfully Created You can now
-      <Link to='/login'>Sign in</Link>
+    <div className='alert alert-dark' style={{display: success ? '':'none'}}>  Nueva cuenta creada satisfactoriamente, ya puedes entrar desde la página {"   "}
+      <Link className='tittle' to='/login'>Login</Link>
     </div>
   )
 

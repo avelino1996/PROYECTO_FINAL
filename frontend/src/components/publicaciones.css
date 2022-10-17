@@ -1,8 +1,7 @@
 .addForm {
-    display: grid;
-    justify-content: space-around;
-    width: auto;
-    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .tittle{

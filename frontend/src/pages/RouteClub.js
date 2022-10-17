@@ -25,11 +25,11 @@ export function RouteClub() {
     return (
         <div className="routesList">
             {routesData && routesData.map(route =>
-                <div className="publicationsList">
+                <div className="publicationsList" key={route._id}>
                     <h5 className="tittleList">{route.tittle}</h5>
                     <div className="contentButton">
-                        <button class="btn btn-dark" >Editar</button>
-                        <button class="btn btn-danger" onClick={() => deleteRoute(route._id)}>
+                        <button className="btn btn-dark" >Editar</button>
+                        <button className="btn btn-danger" onClick={() => deleteRoute(route._id)}>
                             Borrar
                         </button>
                     </div>

@@ -28,17 +28,6 @@
     text-align: center;
 }
 
-.labelForm{
-    text-align: center;
-    margin: 0 auto;
-    background-color: rgb(255, 0, 0);
-    border-radius: 6px;
-    border: px solid black;
-    height: 2.2em;
-    width: 4em;
-    text-align: center;
-}
-
 .inputForm{
     margin: auto;
     border: 0.2px solid rgb(199, 192, 192);
@@ -94,11 +83,13 @@
 @media only screen and (max-width: 680px){
     .formContactParent{
         display: grid;
+        justify-content: space-around;
+        height: 100%;
      }
      .formContact{
         margin: 1em;
         width: auto;
-        height: auto;
+        height: 65vh;
         border-radius: 0.8em;
         border: 0.5px solid rgb(199, 192, 192);
         box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
@@ -107,7 +98,7 @@
         margin: 1em;
         padding: 0.8em;
         width: auto;
-        height: auto;
+        height: 40vh;
         box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
         border: 0.5px solid rgb(199, 192, 192);
     }

@@ -102,14 +102,14 @@ export default function Contact() {
       </form>
       <div className='chats'>
         <div className='chatsChild'>
-          <div className='logo' onClick={(e) => navigate('https://www.facebook.es')}>
+          <button className='logo' onClick={() => window.open('https://www.facebook.es')}>
             <h5>Enlace a nuestra cuenta de Facebook</h5>
             <img src="https://cdn-icons-png.flaticon.com/64/1051/1051360.png" alt="" />
-          </div>
-          <div className='logo' onClick={(e) => navigate('www.facebook.es')}>
+          </button>
+          <button className='logo' onClick={(e) => window.open('https://www.instagram.com')}>
             <h5>Enlace a nuestra cuenta de Instagram</h5>
             <img src="https://cdn-icons-png.flaticon.com/64/87/87390.png" alt="" />
-          </div>
+          </button>
         </div>
         <div className='textDirection'>
           <h6>Dirección: C/Por proponer Nº13, CP:123456 {`(Pueblo)`}</h6>

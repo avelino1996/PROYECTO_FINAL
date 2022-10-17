@@ -17,6 +17,8 @@ export function Usuarios() {
     role: ''
   });
 
+  const { _id, username, email, role} = usuarioSeleccionado
+
   useEffect(() => {
     getUsers()
   }, []);
@@ -44,9 +46,33 @@ export function Usuarios() {
     }));
   }
 
-  const editar = async (id) => {
-  await axios.put(`${URL_USERS}/users/${id}`);
-   setModalEditar(false);
+  const update = user => {
+    return fetch(`${URL_USERS}/users/${_id}`, { 
+      method: "PUT",
+      headers: {
+        Accept: 'application/json',
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(user)
+    })
+      .then(response => {
+        return response.json();
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  };
+  
+
+  const editar = () => {
+    setUsuarioSeleccionado({...usuarioSeleccionado})
+    update({ _id, username, email, role})
+    .then(data => { 
+      if (data.error) {
+        setUsuarioSeleccionado({ ...usuarioSeleccionado})
+      }
+    })
+    setModalEditar(false);
     getUsers();
   }
 
@@ -58,7 +84,7 @@ export function Usuarios() {
       <h2 className="tittle">Usuarios</h2>
       <div>
         {usersData && usersData.map(user =>
-          <div className="users">
+          <div className="users" key={user._id}>
             <h6>{user.username}</h6>
             <p>{user.email}</p>
             <button className="btn btn-dark" onClick={() => seleccionarUsuario(user, 'Editar')}>Editar</button>
@@ -117,7 +143,7 @@ export function Usuarios() {
 
         </ModalBody>
         <ModalFooter>
-          <button className="btn btn-primary" onClick={() => editar(usuarioSeleccionado._id)}>
+          <button className="btn btn-dark" onClick={() => editar(usuarioSeleccionado._id)}>
             Actualizar
           </button>
           <button
@@ -138,7 +164,7 @@ export function Usuarios() {
             Sí
           </button>
           <button
-            className="btn btn-secondary"
+            className="btn btn-dark"
             onClick={()=>setModalEliminar(false)}
           >
             No

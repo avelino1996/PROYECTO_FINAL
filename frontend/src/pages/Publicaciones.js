@@ -39,11 +39,11 @@ export function Publicaciones() {
 
 
             {publicationsData && publicationsData.map(publication =>
-                <div className="publicationsList">
+                <div className="publicationsList" key={publication._id}>
                     <h3>{publication.tittle}</h3>
                     <p>{publication.description}</p>
                     <button>Editar</button>
-                    <button class="btn btn-danger" onClick={() => deletePublication(publication._id)}>
+                    <button className="btn btn-danger" onClick={() =>  deletePublication(publication._id)}>
                         Borrar
                     </button>
                 </div>

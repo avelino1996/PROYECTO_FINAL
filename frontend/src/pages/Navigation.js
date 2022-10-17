@@ -9,34 +9,34 @@ export default function Navigation(history) {
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/">Inicio</a>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="/">Inicio</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/history">Historia del Club</a>
+              <li className="nav-item">
+                <a className="nav-link" href="/history">Historia del Club</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/mountainRout">Rutas del Club</a>
+              <li className="nav-item">
+                <a className="nav-link" href="/mountainRout">Rutas del Club</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Contact">Contacto</a>
+              <li className="nav-item">
+                <a className="nav-link" href="/Contact">Contacto</a>
               </li>
               {!isAuthenticated() && (
               <>
-                <li class="nav-item">
-                  <a class="nav-link" href="/Login">
+                <li className="nav-item">
+                  <a className="nav-link" href="/Login">
                     Login
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/CreateAccount">
+                <li className="nav-item">
+                  <a className="nav-link" href="/CreateAccount">
                     Crear cuenta
                   </a>
                 </li>
@@ -46,17 +46,17 @@ export default function Navigation(history) {
               <>
                 {
                   user.role === "ADMIN" &&
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a 
-                      href="/adminPanel" class="nav-link">
+                      href="/adminPanel" className="nav-link">
                       Admin Panel                    </a>
                   </li>
                 }
-                <li class="nav-item">
+                <li className="nav-item">
                   <a
                     href="/"
                     onClick={() => signout()
-                    } class="nav-link">
+                    } className="nav-link">
                     Logout
                   </a>
                 </li>

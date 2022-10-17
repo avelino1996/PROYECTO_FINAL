@@ -15,6 +15,12 @@
     justify-content: space-between;
     width: 20em;
 }
+.logo{
+    background: none;
+    border: 0;
+    color: inherit;
+}
+
 .tittle{
     margin-left: auto;
     text-decoration: none;

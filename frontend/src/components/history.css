@@ -12,3 +12,13 @@
     text-align:justify ;
    margin: 1em;
 }
+@media only screen and (max-width: 680px){
+    
+    .childHistory{
+        margin: 1em;
+        padding: 1em;
+        display: grid;
+        justify-content: space-around;
+    }
+
+ }

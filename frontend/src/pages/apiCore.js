@@ -38,6 +38,7 @@ export const signup = user => {
     })
 };
 
+
 export const createPublication = publication => {
   return fetch(`${API}/api/publications/createPublication`, { 
     method: "POST",
