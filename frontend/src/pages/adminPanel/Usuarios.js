@@ -1,8 +1,9 @@
 import React from "react"
 import { useState, useEffect } from "react";
 import axios from "axios"
-import { URL_USERS } from "../config";
+import { URL_USERS } from "../../config";
 import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
+import "../../components/usuarios.css"
 
 
 export function Usuarios() {
@@ -86,9 +87,10 @@ export function Usuarios() {
         {usersData && usersData.map(user =>
           <div className="users" key={user._id}>
             <h6>{user.username}</h6>
-            <p>{user.email}</p>
-            <button className="btn btn-dark" onClick={() => seleccionarUsuario(user, 'Editar')}>Editar</button>
-            <button className="btn btn-danger" onClick={() => seleccionarUsuario(user, 'Eliminar')}>Borrar</button>
+            <div className="buttons-div">
+              <button className="btn btn-dark" onClick={() => seleccionarUsuario(user, 'Editar')}>Editar</button>{" "}
+              <button className="btn btn-danger" onClick={() => seleccionarUsuario(user, 'Eliminar')}>Borrar</button>
+            </div>
           </div>
         )}
       </div>

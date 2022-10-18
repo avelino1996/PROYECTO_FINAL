@@ -5,18 +5,13 @@
   background-size: cover;
 
 }
-.navBar {
-  display: flex;
-  justify-content:space-evenly;
-  text-align: center;
-  height: 2em;
-  margin-bottom: 3em;
-  background-color:rgb(215, 200, 200);
+.parent-app{
+  height: 100%;
+  background-image: url(/home/andres/Documentos/PROYECTO-FINAL/frontend/src/components/imagenes/topografiaGilena.png);
+  background-position: center 20%;
+  background-size: cover;
 }
-.navLink{
-  justify-content: center;
-  text-decoration: none;
-  color: black;
+.child-app{
+  height: 100%;
 }
-
 

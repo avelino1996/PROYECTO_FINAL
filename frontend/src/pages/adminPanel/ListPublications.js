@@ -1,12 +1,10 @@
 import React from "react"
 import { useState, useEffect } from "react";
-import { URL_PUBLICATIONS } from "../config";
+import { URL_PUBLICATIONS } from "../../config";
 import axios from "axios"
-import { Link, Route, Routes } from "react-router-dom";
-import AddPublication from "./AddPublication";
-import "../components/publicaciones.css"
+import "../../components/publicaciones.css"
 
-export function Publicaciones() {
+export function ListPublications() {
 
     const [publicationsData, setPublicationsData] = useState([]);
 
@@ -28,21 +26,9 @@ export function Publicaciones() {
 
     return (
         <div className="addForm">
-           <div>
-               <Link  className="tittle" to="addPublication">Añadir Publicación</Link>
-           </div>
-           <div>
-            <Routes>
-                <Route path="addPublication" element={<AddPublication />} />
-            </Routes>
-           </div>
-
-
             {publicationsData && publicationsData.map(publication =>
                 <div className="publicationsList" key={publication._id}>
                     <h3>{publication.tittle}</h3>
-                    <p>{publication.description}</p>
-                    <button>Editar</button>
                     <button className="btn btn-danger" onClick={() =>  deletePublication(publication._id)}>
                         Borrar
                     </button>

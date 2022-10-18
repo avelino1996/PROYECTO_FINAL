@@ -1,15 +1,27 @@
-.adminPanel{
-    display: flex;
+.parent{
+    margin: 1em;
+    background-color: white;
 }
-.lateralNav{
-    margin-left: 1em;
-    margin-right: 2em;
-    display: grid;
-    justify-content:space-between;
-    width: 20%;
+.adminPanel {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding-top: 2em;
+    border: 0.5px solid rgb(199, 192, 192);
+    box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
+    border-radius: 0.8em;
 }
 
-.componentNav{
+.lateralNav {
+    margin-left: 1em;
+    display: grid;
+    justify-content: space-between;
+    width: 20%;
+    height: 50%;
+
+}
+
+.componentNav {
     margin-top: 1em;
     padding: 0.5em;
     list-style: none;
@@ -19,23 +31,27 @@
     border: 0.5px solid rgb(102, 102, 102);
     border-radius: 4px;
 }
-
-.linkNav{
-    text-decoration: none;
-    color: black;
-    
+.componentsAdmin{
+    width: 100%;
+    margin-right: 4em;
 }
 
-@media only screen and (max-width: 600px){
-    .adminPanel{
+.linkNav {
+    text-decoration: none;
+    color: black;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .adminPanel {
         display: grid;
         justify-content: space-around;
     }
-    .lateralNav{
+
+    .lateralNav {
         width: 90%;
         margin-right: em;
         display: flex;
         flex-wrap: wrap;
     }
- }
-
+}

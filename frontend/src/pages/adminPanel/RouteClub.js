@@ -1,8 +1,8 @@
 import React from "react"
 import { useState, useEffect } from "react";
-import { URL_ROUTES } from "../config"; 
+import { URL_ROUTES } from "../../config"; 
 import axios from "axios"
-import ("../components/routesClubs.css")
+import ("../../components/routesClubs.css")
 
 export function RouteClub() {
 

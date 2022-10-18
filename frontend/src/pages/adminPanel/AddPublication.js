@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { URL_ROUTES } from '../config';
+import { URL_PUBLICATIONS } from '../../config';
 import axios from 'axios';
-import "../components/addPublication.css"
-import { useUser } from './apiCore';
+import "../../components/addPublication.css"
+import { useUser } from '../apiCore';
 
 
 
-const AddRouteClub = () => {
+const AddPublication = () => {
   const user = useUser();
   const navigate = useNavigate();
   const [values, setValues] = useState({
     tittle: '',
     description: '',
     distance: '',
-    dayAt: '',
-    routeNumber: '',
+    createBy: '',
+    publicationNumber: '',
     photo: '',
     loading: false,
     error: '',
@@ -26,8 +26,8 @@ const AddRouteClub = () => {
     tittle,
     description,
     distance,
-    dayAt,
-    routeNumber,
+    createBy,
+    publicationNumber,
     photo,
     loading,
     error,
@@ -61,13 +61,13 @@ const AddRouteClub = () => {
 
   const clickSubmit = async (event) => {
     event.preventDefault()
-    console.log("Creando Ruta", `${URL_ROUTES}/createRout`);
-    await axios.post(`${URL_ROUTES}/createRout`, values);
+    console.log("Creando publicación", `${URL_PUBLICATIONS}/createPublication`);
+    await axios.post(`${URL_PUBLICATIONS}/createPublication`, values);
     event.preventDefault()
     
   }
 
-  const newRouteForm = () => (
+  const newPublicationForm = () => (
     <form className='mb-3' >
       <h4>Añadir Foto</h4>
       <div className='form-group'>
@@ -108,25 +108,25 @@ const AddRouteClub = () => {
         />
       </div>
       <div className='form-group'>
-        <label className='text-muted'>¿Qué día es la ruta?</label>
+        <label className='text-muted'>Creado por</label>
         <input
-          onChange={handleChange('dayAt')}
+          onChange={handleChange('createBy')}
           type='text'
           className='form-control'
-          value={dayAt}
+          value={createBy}
         />
       </div>
       
       <div className='form-group'>
-        <label className='text-muted'>Número de ruta</label>
+        <label className='text-muted'>Número de publicación</label>
         <input
-          onChange={handleChange('routeNumber')}
+          onChange={handleChange('publicationNumber')}
           type='text'
           className='form-control'
-          value={routeNumber}
+          value={publicationNumber}
         />
       </div>
-      <button className='btn btn-outline-primary' onClick={clickSubmit}>Crear ruta</button>
+      <button className='btn btn-outline-primary' onClick={clickSubmit}>Crear publicación</button>
     </form>
   )
 
@@ -154,7 +154,7 @@ const AddRouteClub = () => {
           {user.role === "ADMIN" && `Hola ${user.username}, bienvenida al panel de administración`}
             {showLoading()}
             {showError()}
-            {newRouteForm()}
+            {newPublicationForm()}
           </div>
         </div>
       </div>
@@ -162,4 +162,4 @@ const AddRouteClub = () => {
   )
 }
 
-export default AddRouteClub;
+export default AddPublication;

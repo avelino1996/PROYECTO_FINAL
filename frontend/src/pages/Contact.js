@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Navigation from './Navigation';
 import { coments } from './apiCore';
 import "../components/contact.css"
 import { useNavigate } from 'react-router';
@@ -134,7 +133,6 @@ export default function Contact() {
 
   return (
     <>
-      <Navigation />
       {showError()}
       {showLoading()}
       {comentForm()}

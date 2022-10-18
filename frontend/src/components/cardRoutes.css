@@ -1,4 +1,4 @@
-.card{
+.card {
     margin: 1em;
     margin-top: 2em;
     padding: 2em;
@@ -7,20 +7,23 @@
     padding: 1em;
     width: 40em;
 }
-.childCard{
+
+.childCard {
     text-align: center;
     display: grid;
     justify-content: space-around;
 }
-.cardImage{
+
+.cardImage {
     width: 100%;
     height: 100%;
 }
-.textCard{
+
+.textCard {
     text-align: justify;
 }
 
-.card{
+.card {
     margin: 1em;
     margin-top: 2em;
     padding: 2em;
@@ -28,4 +31,10 @@
     justify-content: space-evenly;
     padding: 1em;
     width: 25em;
+}
+
+@media only screen and (max-width: 720px) {
+    .card {
+        width: 22em;
+    }
 }

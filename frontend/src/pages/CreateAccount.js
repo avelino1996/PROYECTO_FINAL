@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Navigation from './Navigation'
 import "../components/login&create.css"
 
 import "../components/Signup.css"
@@ -93,7 +92,6 @@ const Signup = () => {
 
   return (
     <>
-      <Navigation/>
         {showError()}
         {showSuccess()}
         {signUpForm()}

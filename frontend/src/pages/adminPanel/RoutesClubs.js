@@ -2,7 +2,7 @@ import React from "react"
 import { Link, Route, Routes } from "react-router-dom";
 import AddRouteClub from "./AddRouteClub";
 import { RouteClub } from "./RouteClub";
-import "../components/routesClubs.css"
+import "../../components/routesClubs.css"
 
 export function Routesclubs() {
 

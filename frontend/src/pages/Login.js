@@ -3,7 +3,6 @@ import {  Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { signin, authenticate, isAuthenticated } from './apiCore'
 import "../components/login&create.css"
-import Navigation from './Navigation';
 
 
 export default function Login() {
@@ -113,7 +112,6 @@ export default function Login() {
 
     return (
       <>
-      <Navigation/>
       {showError()}
       {showLoading()}
       {redirectUser()}

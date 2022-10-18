@@ -1,12 +1,10 @@
 import React from "react";
-import Navigation from './Navigation';
 import "../components/history.css"
 
 export function History() {
 
   return (
     <>
-      <Navigation />
       <div className="history">
         <h1>Historia del club</h1>
         <div className="childHistory">

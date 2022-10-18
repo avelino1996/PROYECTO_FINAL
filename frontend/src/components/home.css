@@ -1,0 +1,19 @@
+.welcome {
+    text-align: center;
+    background-color: rgb(95, 190, 85);
+    margin: 1.6em;
+    padding: 1em;
+    border-radius: 8px;
+    border: 0.5px solid rgb(33, 37, 41);
+    box-shadow: 0 10px 10px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
+}
+.publications{
+    display: grid;
+    justify-content: space-around;
+   
+}
+
+@media only screen and (max-width: 680px){
+
+
+ }

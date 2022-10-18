@@ -2,13 +2,8 @@
     margin: 0;
     display: flex;
     justify-content: space-around;
-    background-image: url(/home/andres/Documentos/PROYECTO-FINAL/frontend/src/components/imagenes/topografiaGilena.png);
     height: 100vh;
     padding-top: 2em;
-    background-position: center;
-    background-size: cover;
-    
-
 }
 .formContact{
     background-color: white;

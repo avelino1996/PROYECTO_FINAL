@@ -1,6 +1,5 @@
 import React from "react"
 import { useState, useEffect } from "react";
-import Navigation from './Navigation';
 import { URL_ROUTES } from "../config";
 import CardRoutes from "../components/CardRoutes";
 import "../components/mountainRouts.css"
@@ -23,10 +22,8 @@ export function MountainRout() {
   return (
 
 
-    <div>
-      <Navigation/>
-      
-      <div className="routesClub">
+    <div className="routesClub">
+      <div className="routes">
         {routesData && routesData.map(route => <CardRoutes key={route._id} routesData={route} />)}
       </div>
       

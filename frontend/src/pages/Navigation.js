@@ -1,7 +1,6 @@
 import React from "react";
-
 import { isAuthenticated, signout, useUser } from "./apiCore";
-
+import "../components/navigation.css"
 
 export default function Navigation(history) {
 
@@ -52,12 +51,14 @@ export default function Navigation(history) {
                       Admin Panel                    </a>
                   </li>
                 }
-                <li className="nav-item">
+                <li className="nav-item"></li>
+                <li className="nav-last">
                   <a
                     href="/"
                     onClick={() => signout()
                     } className="nav-link">
-                    Logout
+                    Logout {" "}{"  "}
+                    <img src="https://cdn-icons-png.flaticon.com/24/5509/5509597.png" alt="" className="image-logout"/>
                   </a>
                 </li>
               </>

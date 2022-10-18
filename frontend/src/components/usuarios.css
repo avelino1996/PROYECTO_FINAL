@@ -1,0 +1,17 @@
+
+.list{
+    width: 100%;
+}
+
+.users{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1em;
+}
+
+.buttons-div{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}

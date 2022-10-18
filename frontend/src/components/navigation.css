@@ -1,0 +1,8 @@
+.navbar-nav{
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+.image-logout{
+    padding-bottom: 8px;
+}

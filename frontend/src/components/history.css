@@ -1,6 +1,12 @@
 .history{
+    background-color: white;
     margin: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    border: 0.5px solid rgb(97, 99, 101);
+    box-shadow: 0 10px 10px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
 }
+
 
 .childHistory{
     margin: 1em;
