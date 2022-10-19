@@ -1,17 +1,11 @@
 .parentLoginForm{
-    background-image: url(/home/andres/Documentos/PROYECTO-FINAL/frontend/src/components/imagenes/topografiaGilena.png);
     height: 100vh;
     padding-top: 4em;
-    background-position: center;
-    background-size: cover;
     margin: 0;
 }
 .parentCreateForm{
-    background-image: url(/home/andres/Documentos/PROYECTO-FINAL/frontend/src/components/imagenes/topografiaGilena.png);
     height: 100vh;
     padding-top: 4em;
-    background-position: center;
-    background-size: cover;
 }
 .formLoginBox{
     width: 300px;

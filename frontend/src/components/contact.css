@@ -4,13 +4,15 @@
     justify-content: space-around;
     height: 100vh;
     padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 .formContact{
     background-color: white;
     margin-top: 1em;
     margin-left: 2em;
     height: 450px;
-    width: 40%;
+    width: 360px;
     border-radius: 0.8em;
     border: 0.5px solid rgb(199, 192, 192);
 }
@@ -47,7 +49,7 @@
     display: grid;
     justify-content: space-around;
     padding: 1em;
-    width: 50%;
+    width: 490px;
     height: 450px;
 }
 .chatsChild{
@@ -72,6 +74,18 @@
 .textDirection{
    padding-top: 4em;
    text-align: center;
+}
+
+@media only screen and (max-width: 1080px){
+    .formContactParent{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        height: 100%;
+     }
+     .chats{
+        margin: 1em;
+        padding: 0.8em;}
 }
 
 

@@ -6,7 +6,7 @@ export function History() {
   return (
     <>
       <div className="history">
-        <h1>Historia del club</h1>
+        <h1 className="title-history">Historia del club</h1>
         <div className="childHistory">
           <div className="textHistory">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, aliquid dolor temporibus ratione illo, exercitationem non atque obcaecati, quaerat amet facere reiciendis. Sint natus magnam quisquam omnis temporibus non quis.

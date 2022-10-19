@@ -20,18 +20,18 @@ export function Home() {
 
   return (
     <>
-     <div className="parent">
-     
-      <div className="publications">
       <h5 className="welcome">
-      Bienvenidos a la página oficial de nuestro club de Silexbikers. Aquí encontrarás todas las rutas y noticias que se llevan a cabo en nuestro club.
+         Bienvenidos a la página oficial de nuestro club de Silexbikers. Aquí encontrarás todas las rutas y noticias que se llevan a cabo en nuestro club.
      </h5>
+      <div className="publications">
+      
+     
         {publicationsData && publicationsData.map(publication =>
            <CardPublication key={publication._id} 
            publicationsData={publication} 
            />)}
       </div>
-   </div>
+   
     </>
   
   )

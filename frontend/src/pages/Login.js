@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import {  Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import { signin, authenticate, isAuthenticated } from './apiCore'
+import { signin, authenticate, isAuthenticated, useUser} from './apiCore'
 import "../components/login&create.css"
 
 
 export default function Login() {
   const navigate = useNavigate();
-
+  const users = useUser();
     const [values, setValues] = useState({
       email: '',
       password: '',
@@ -41,7 +41,9 @@ export default function Login() {
               }
             )
           }
-        })
+        }).then(
+          redirectUser()
+        )
     }
 
     const signInForm = () => (
@@ -85,7 +87,7 @@ export default function Login() {
     const redirectUser = () => {
       console.log("redirectUser", user);
       if (redirectToReferrer) {
-        if (user && user.role === "ADMIN") {
+        if (users && users.role === "ADMIN") {
           return <Navigate to="/AdminPanel" />
         } else {
           return <Navigate to="/mountainRout" />

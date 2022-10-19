@@ -6,12 +6,17 @@
 
 }
 .parent-app{
-  height: 100%;
+  height: auto;
   background-image: url(/home/andres/Documentos/PROYECTO-FINAL/frontend/src/components/imagenes/topografiaGilena.png);
-  background-position: center 20%;
+  background-position: center;
   background-size: cover;
 }
 .child-app{
   height: 100%;
+  padding-top: 1em;
+  display: grid;
+  justify-content: center;
+  justify-self: center;
+  
 }
 

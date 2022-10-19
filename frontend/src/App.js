@@ -33,9 +33,9 @@ export default function App() {
               <Route path="CreateAccount" element={<CreateAcount />} />
               <Route path="AdminPanel/*" element={<ProtectedRoute><AdminPanel /></ProtectedRoute>} />
             </Routes>
-            <Footer/>
           </BrowserRouter>
         </div>
+        <Footer/>
       </div>
     </div>
   )

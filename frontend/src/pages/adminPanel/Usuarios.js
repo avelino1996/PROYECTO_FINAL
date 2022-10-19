@@ -83,7 +83,7 @@ export function Usuarios() {
 
     <div className="list">
       <h2 className="tittle">Usuarios</h2>
-      <div>
+      <div className="">
         {usersData && usersData.map(user =>
           <div className="users" key={user._id}>
             <h6>{user.username}</h6>

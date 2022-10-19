@@ -1,13 +1,16 @@
 .history{
     background-color: white;
-    margin: 1em;
+    margin: 4em;
     padding: 1em;
     border-radius: 8px;
     border: 0.5px solid rgb(97, 99, 101);
     box-shadow: 0 10px 10px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
 }
 
-
+.title-history{
+    padding-top: 0.5em;
+    margin-left: 1em;
+}
 .childHistory{
     margin: 1em;
     padding: 1em;
@@ -18,13 +21,25 @@
     text-align:justify ;
    margin: 1em;
 }
+@media only screen and (max-width: 1080px){
+    
+    .childHistory{
+        display: grid;
+        justify-content: space-around;
+    }
+
+ }
 @media only screen and (max-width: 680px){
     
     .childHistory{
         margin: 1em;
-        padding: 1em;
+        padding: 0;
         display: grid;
         justify-content: space-around;
+    }
+    .textHistory{
+        text-align:justify ;
+       margin: 0;
     }
 
  }

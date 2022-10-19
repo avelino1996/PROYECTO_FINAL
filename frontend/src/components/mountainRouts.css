@@ -1,16 +1,46 @@
 .routesClub {
     height: 100%;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: flex;
+    justify-content: center;
 }
 
 .routes {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+.parent{
+}
+.rutasTitle{
+    margin-left: 4em;
+    margin-right: 4em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(95, 190, 85);
+    border: 0.5px solid rgb(102, 102, 102);
+    border-radius: 4px;
+
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 1080px) {
     .routesClub {
-        padding: 2em;
+        display: grid;
+        justify-content: center;
+        min-width: 400px;
     }
+    .routes{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
     .routes{
         display: flex;
         flex-direction: column;

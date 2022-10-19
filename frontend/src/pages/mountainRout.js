@@ -21,12 +21,17 @@ export function MountainRout() {
 
   return (
 
-
+    <> 
+      <h3 className="rutasTitle">Rutas del Club</h3>
+    
     <div className="routesClub">
+      
       <div className="routes">
         {routesData && routesData.map(route => <CardRoutes key={route._id} routesData={route} />)}
       </div>
       
     </div>
+    </>
+   
   )
 }

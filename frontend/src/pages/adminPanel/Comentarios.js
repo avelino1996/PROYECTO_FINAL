@@ -31,9 +31,11 @@ const deleteComentario = async (id) => {
       <div className="comentsList">
         {comentsData && comentsData.map(coment =>  
           <div className="coments" key={coment._id}>
-            <h6>{coment.name}</h6>
+            <div>
+              <h6>{coment.name}</h6>
+            </div>
             <p>{coment.description}</p>
-            <button className="btn btn-danger" onClick={() => deleteComentario(coment._id)}>Borrar</button>
+            <div><button className="btn btn-danger" onClick={() => deleteComentario(coment._id)}>Borrar</button></div>
           </div>
           )}
       </div>

@@ -15,3 +15,16 @@
     justify-content: space-between;
     width: 25%;
 }
+@media only screen and (max-width: 600px) {
+    .modal-dialog{
+        display: flex;
+    justify-content: center;
+    justify-self: center;
+    }
+  .modal-content{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    max-width: 300px;
+  }
+}

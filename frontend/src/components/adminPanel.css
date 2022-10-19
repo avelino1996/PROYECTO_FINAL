@@ -1,11 +1,16 @@
 .parent{
     margin: 1em;
-    background-color: white;
+    background-color: rgb(175, 21, 21);
+    border-radius: 0.8em;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .adminPanel {
     display: flex;
-    height: 100vh;
-    width: 100%;
+    justify-content: space-around;
+    height: 100%;
+    min-width: 720px;
     padding-top: 2em;
     border: 0.5px solid rgb(199, 192, 192);
     box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
@@ -16,7 +21,7 @@
     margin-left: 1em;
     display: grid;
     justify-content: space-between;
-    width: 20%;
+    min-width: 160px;
     height: 50%;
 
 }
@@ -41,17 +46,42 @@
     color: black;
 
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1080px) {
     .adminPanel {
         display: grid;
-        justify-content: space-around;
+        justify-content: start;
+        min-width: auto;
     }
-
-    .lateralNav {
-        width: 90%;
-        margin-right: em;
+     .lateralNav {
+        width: 100%;
+        min-width: 460px;
+        margin-left: 0;
+        margin-right: 2em;
+        padding-right: 2em;
         display: flex;
+        flex-wrap: wrap;
+    }
+    .componentsAdmin{
+        width: 100%;
+        margin-right: 1em;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .parent{
+        margin: 2em;
+        background-color: white;
+        border-radius: 0.8em;
+        max-width: 360px;
+        
+    }
+    .adminPanel {
+        display: grid;
+        width: 360px;
+    }
+    .lateralNav {
+        min-width: 300px;
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 }

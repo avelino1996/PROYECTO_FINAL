@@ -1,4 +1,5 @@
 .list{
+    width: 100%;
     margin-top: 1.5em;
     margin-left: 2em;
 }
@@ -7,13 +8,14 @@
 .comentsList{
     display: grid;
     justify-content: space-around;
-    width: 20em;
+    width: 100%;
     
 }
 .coments{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 20em;
+    
 }
 .logo{
     background: none;
@@ -30,4 +32,8 @@
     line-height: var(--bs-body-line-height);
     text-align: var(--bs-body-text-align);
     font-size:x-large;
+}
+
+@media only screen and (max-width: 1080px) {
+    
 }
