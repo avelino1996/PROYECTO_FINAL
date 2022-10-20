@@ -1,39 +1,10 @@
-.list{
-    width: 100%;
-    margin-top: 1.5em;
-    margin-left: 2em;
-}
-
-
-.comentsList{
-    display: grid;
-    justify-content: space-around;
-    width: 100%;
-    
-}
 .coments{
+    background-color: white;
+    display: grid;
+    align-items: center;
+    min-width: 300px;
+}
+.parrafo{
+    justify-content: center;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
-}
-.logo{
-    background: none;
-    border: 0;
-    color: inherit;
-}
-
-.tittle{
-    margin-left: auto;
-    text-decoration: none;
-    color: black;
-    font-family: var(--bs-body-font-family);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    text-align: var(--bs-body-text-align);
-    font-size:x-large;
-}
-
-@media only screen and (max-width: 1080px) {
-    
 }

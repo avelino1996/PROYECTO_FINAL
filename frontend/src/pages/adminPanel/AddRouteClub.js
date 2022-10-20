@@ -151,7 +151,6 @@ const AddRouteClub = () => {
       <div className="formContainer">
         <div className="addRow">
           <div className="col-md-8 offset-md-2">
-          {user.role === "ADMIN" && `Hola ${user.username}, bienvenida al panel de administración`}
             {showLoading()}
             {showError()}
             {newRouteForm()}

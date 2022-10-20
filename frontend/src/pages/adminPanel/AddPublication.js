@@ -69,7 +69,7 @@ const AddPublication = () => {
 
   const newPublicationForm = () => (
     <form className='mb-3' >
-      <h4>Añadir Foto</h4>
+      <label className='text-muted'>Añadir foto</label>
       <div className='form-group'>
         <label className='btn btn-secondary'>
           <input
@@ -151,7 +151,6 @@ const AddPublication = () => {
       <div className="formContainer">
         <div className="addRow">
           <div className="col-md-8 offset-md-2">
-          {user.role === "ADMIN" && `Hola ${user.username}, bienvenida al panel de administración`}
             {showLoading()}
             {showError()}
             {newPublicationForm()}

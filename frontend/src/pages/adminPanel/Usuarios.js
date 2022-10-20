@@ -81,19 +81,19 @@ export function Usuarios() {
   return (
 
 
-    <div className="list">
-      <h2 className="tittle">Usuarios</h2>
-      <div className="">
-        {usersData && usersData.map(user =>
-          <div className="users" key={user._id}>
-            <h6>{user.username}</h6>
-            <div className="buttons-div">
-              <button className="btn btn-dark" onClick={() => seleccionarUsuario(user, 'Editar')}>Editar</button>{" "}
-              <button className="btn btn-danger" onClick={() => seleccionarUsuario(user, 'Eliminar')}>Borrar</button>
+    <div>
+        <div>
+          {usersData && usersData.map(user =>
+            <div className="users" key={user._id}>
+              <h6>{user.username}</h6>
+              <div>
+                <button className="btn btn-dark" onClick={() => seleccionarUsuario(user, 'Editar')}>Editar</button>{" "}
+                <button className="btn btn-danger" onClick={() => seleccionarUsuario(user, 'Eliminar')}>Borrar</button>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      
 
       <Modal isOpen={modalEditar}>
         <ModalHeader>

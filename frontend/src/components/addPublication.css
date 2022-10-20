@@ -3,3 +3,16 @@
     display: grid;
     justify-content: space-around;
 }
+.col-md-8{
+    width: 100%;
+    margin-left: 0;
+    display: grid;
+    align-items: center;
+}
+
+@media only screen and (max-width: 680px){
+    .btn{
+        margin-top: 0.4em;
+    }
+
+}

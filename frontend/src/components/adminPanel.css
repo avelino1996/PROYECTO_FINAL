@@ -1,87 +1,82 @@
 .parent{
-    margin: 1em;
-    background-color: rgb(175, 21, 21);
-    border-radius: 0.8em;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.adminPanel {
-    display: flex;
-    justify-content: space-around;
-    height: 100%;
     min-width: 720px;
-    padding-top: 2em;
+    margin: 1em;
+    padding: 1em;
+    background-color: white;
     border: 0.5px solid rgb(199, 192, 192);
     box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
     border-radius: 0.8em;
+    min-height: 500px;
+    display: inline-block;
+    text-align: center;
 }
-
-.lateralNav {
-    margin-left: 1em;
+.adminPanel{
     display: grid;
-    justify-content: space-between;
-    min-width: 160px;
-    height: 50%;
-
 }
-
-.componentNav {
-    margin-top: 1em;
-    padding: 0.5em;
-    list-style: none;
-    height: 2.5em;
-    width: 8em;
-    background-color: rgb(95, 190, 85);
-    border: 0.5px solid rgb(102, 102, 102);
+.lateralNav{
+   width: auto;
+display: flex;
+margin-right: 2em;
+align-items: center;
+justify-content: space-between;
+flex-flow: wrap;
+}
+.componentNav{
+    background-color: rgb(66, 184, 66);
     border-radius: 4px;
+    list-style: none;
+    padding: 0.4em;
+    min-width: 120px;
+    max-height: 36px;
 }
-.componentsAdmin{
-    width: 100%;
-    margin-right: 4em;
-}
-
-.linkNav {
+.linkNav{
     text-decoration: none;
     color: black;
-
 }
-@media only screen and (max-width: 1080px) {
-    .adminPanel {
-        display: grid;
-        justify-content: start;
-        min-width: auto;
-    }
-     .lateralNav {
-        width: 100%;
-        min-width: 460px;
-        margin-left: 0;
-        margin-right: 2em;
-        padding-right: 2em;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .componentsAdmin{
-        width: 100%;
-        margin-right: 1em;
-    }
+.routes{
+    width: auto;
+    margin-right: 1em;
+    margin-left: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 760px){
     .parent{
-        margin: 2em;
-        background-color: white;
-        border-radius: 0.8em;
+        min-width: 0px;
+        width: auto;
+    }
+    .routes{
+        margin-right: 0;
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 610px){
+    .parent{
+        min-width: 0px;
+        width: auto;
+    }
+    .lateralNav{
+        width: auto;
+        justify-content: space-around;
+    }
+     .componentNav{
+        background-color: rgb(66, 184, 66);
+        list-style: none;
+        padding: 0.4em;
+        min-width: 120px;
+        max-height: 36px;
+        margin: 0.2em;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .adminPanel{
+        max-width: 384px;
+    }
+    .routes{
+        margin: auto;
         max-width: 360px;
-        
-    }
-    .adminPanel {
-        display: grid;
-        width: 360px;
-    }
-    .lateralNav {
-        min-width: 300px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
     }
 }

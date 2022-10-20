@@ -8,7 +8,7 @@ export function Publicaciones() {
 
     return (
         <div className="addForm">
-           <div>
+           <div className="linksPubli">
                <Link  className="tittle" to="addPublication">Añadir Publicación</Link>
                <Link  className="tittle" to="listPublications">Publicaciones</Link>
            </div>

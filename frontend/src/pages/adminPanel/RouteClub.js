@@ -26,13 +26,10 @@ export function RouteClub() {
         <div className="routesList">
             {routesData && routesData.map(route =>
                 <div className="publicationsList" key={route._id}>
-                    <h5 className="tittleList">{route.tittle}</h5>
-                    <div className="contentButton">
-                        <button className="btn btn-dark" >Editar</button>
+                    <h3 className="tittleList">{route.tittle}</h3>
                         <button className="btn btn-danger" onClick={() => deleteRoute(route._id)}>
                             Borrar
                         </button>
-                    </div>
                 </div>
             )}
 

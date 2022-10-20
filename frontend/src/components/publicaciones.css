@@ -1,20 +1,37 @@
 .addForm {
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    max-width: 520px;
     background-color: white;
+    align-items: center;
 }
-
+.linksPubli{
+    min-width: none;
+    width: auto;
+    align-items: center;
+}
 .tittle{
-    margin-left: 66.25px;
-    margin-bottom: 2em;
+    padding: 1em;
     text-decoration: none;
     color: black;
-    font-size:x-large
+    font-size:large
     
 }
 .publicationsList{
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+@media only screen and (max-width: 720px){
+    .linksPubli{
+        display: grid;
+        min-width: none;
+        width: auto;
+        align-items: center;
+    }
+    .tittle{
+        padding: 0.2em;
+        margin-left: 0;
+    }
 }

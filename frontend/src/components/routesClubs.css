@@ -1,20 +1,21 @@
 .addForm {
     display: grid;
     justify-content: space-between;
-    margin-top: 1.5em;
-    width: 60vw;
+    align-items: center;
+    max-width: 520px;
+    background-color: white;
+    align-items: center;
 }
 .routes{
-    margin-left: 0;
+        min-width: none;
+        width: auto;
+        align-items: center;
 }
 .tittleList{
     margin-right: 2em;
     
 }
 
-.routesList{
-    width: 50vw;
-}
 .publicationsList{
     margin-top: 1em;
     display: flex;
@@ -25,10 +26,19 @@
     display: flex;
     justify-content: space-between;
 }
+@media only screen and (max-width: 720px){
+    .routes{
+        display: grid;
+        min-width: none;
+        width: auto;
+        align-items: center;
+    }
+}
 @media only screen and (max-width: 680px){
     .addForm {
         display: grid;
         justify-content: space-between;
+        padding: 0;
         margin: 1em;
         width: auto;
     }
