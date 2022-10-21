@@ -2,7 +2,7 @@ import React from "react"
 import { useState, useEffect } from "react";
 import axios from "axios"
 import { URL_COMENT } from "../../config";
-import "../../components/comentarios.css"
+import "../../components/css/comentarios.css"
 
 export function Comentarios() {
 

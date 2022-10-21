@@ -2,7 +2,7 @@ import React from "react"
 import { useState, useEffect } from "react";
 import { URL_PUBLICATIONS } from "../../config";
 import axios from "axios"
-import "../../components/publicaciones.css"
+import "../../components/css/publicaciones.css"
 
 export function ListPublications() {
 

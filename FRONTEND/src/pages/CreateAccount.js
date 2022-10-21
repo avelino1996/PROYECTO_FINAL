@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import "../components/login&create.css"
+import "../components/css/login&create.css"
 
-import "../components/Signup.css"
+import "../components/css/Signup.css"
 import { signup } from './apiCore';
 
 const Signup = () => {

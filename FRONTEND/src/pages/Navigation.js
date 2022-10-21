@@ -1,10 +1,9 @@
 import React from "react";
 import { isAuthenticated, signout, useUser } from "./apiCore";
-import "../components/navigation.css"
+import "../components/css/navigation.css"
 
 export default function Navigation(history) {
-
-  const user = useUser();
+  const users = useUser();
 
   return (
     <div>
@@ -47,7 +46,7 @@ export default function Navigation(history) {
                 {isAuthenticated() && (
                   <>
                     {
-                      user.role === "ADMIN" &&
+                      users.role === "ADMIN" &&
                       <li className="nav-item">
                         <a
                           href="/adminPanel" className="nav-link">

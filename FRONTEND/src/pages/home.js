@@ -2,7 +2,7 @@ import React from "react"
 import { useState, useEffect } from "react";
 import CardPublication from "../components/CardPublication";
 import { URL_PUBLICATIONS } from "../config";
-import "../components/home.css"
+import "../components/css/home.css"
 
 export function Home() {
 
@@ -16,7 +16,7 @@ export function Home() {
       .then(data => {
         setPublicationsData(data.publications)
       });
-  }, []);
+  }, [URLpubli]);
 
   return (
     <>

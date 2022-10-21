@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios"
 import { URL_USERS } from "../../config";
 import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
-import "../../components/usuarios.css"
+import "../../components/css/usuarios.css"
 
 
 export function Usuarios() {

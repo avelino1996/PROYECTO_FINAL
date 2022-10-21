@@ -1,6 +1,6 @@
 import React from "react"
 import ShowImage from "./ShowImages"
-import "./cardRoutes.css"
+import "./css/cardRoutes.css"
 
 export default function CardRoutes({ routesData }) {
 

@@ -9,6 +9,9 @@
     display: grid;
     align-items: center;
 }
+.btn{
+    margin-top: 0.4em;
+}
 
 @media only screen and (max-width: 680px){
     .btn{

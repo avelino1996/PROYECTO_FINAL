@@ -6,10 +6,16 @@
     background-color: white;
     align-items: center;
 }
-.routes{
-        min-width: none;
-        width: auto;
-        align-items: center;
+.route{
+    min-width: 330px;
+    width: auto;
+    align-items: center;
+}
+.tittle{
+    margin: 0.2em;
+    border: 1px solid  rgb(66, 184, 66);
+    border-radius: 4px;
+    padding: 0.2em;
 }
 .tittleList{
     margin-right: 2em;

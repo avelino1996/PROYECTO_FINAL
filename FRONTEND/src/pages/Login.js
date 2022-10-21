@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {  Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { signin, authenticate, isAuthenticated, useUser} from './apiCore'
-import "../components/login&create.css"
+import "../components/css/login&create.css"
 
 
 export default function Login() {
@@ -41,9 +41,7 @@ export default function Login() {
               }
             )
           }
-        }).then(
-          redirectUser()
-        )
+        })
     }
 
     const signInForm = () => (
@@ -85,7 +83,6 @@ export default function Login() {
     )
 
     const redirectUser = () => {
-      console.log("redirectUser", user);
       if (redirectToReferrer) {
         if (users && users.role === "ADMIN") {
           return <Navigate to="/AdminPanel" />
@@ -93,7 +90,7 @@ export default function Login() {
           return <Navigate to="/mountainRout" />
         }
       }
-      if (isAuthenticated()) {
+      if (user && isAuthenticated()) {
         return <Navigate to="/" />
       }
     }
@@ -116,8 +113,8 @@ export default function Login() {
       <>
       {showError()}
       {showLoading()}
-      {redirectUser()}
       {signInForm()}
+      {redirectUser()}
       </>
 
     )

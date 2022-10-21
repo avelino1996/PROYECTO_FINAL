@@ -6,7 +6,7 @@ import {Routesclubs} from './RoutesClubs';
 import {Comentarios} from './Comentarios';
 import { Link } from "react-router-dom"; 
 import { useUser } from '../apiCore';
-import "../../components/adminPanel.css";
+import "../../components/css/adminPanel.css";
 
 export function AdminPanel() {
   const user = useUser();

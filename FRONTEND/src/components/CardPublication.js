@@ -1,6 +1,6 @@
 import React from "react"
 import ShowImage from "./ShowImages"
-import "./cardPubli.css"
+import "./css/cardPubli.css"
 
 export default function CardPublication ({ publicationsData }) {
 

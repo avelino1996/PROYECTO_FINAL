@@ -1,6 +1,6 @@
 import React from 'react';
 import { API} from '../config';
-import "./showImage.css"
+import "./css/showImage.css"
 
 const ShowImage = ({item, url}) => (
     item ? 

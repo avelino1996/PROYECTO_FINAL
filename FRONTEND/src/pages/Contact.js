@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { coments } from './apiCore';
-import "../components/contact.css"
-import { useNavigate } from 'react-router';
-
+import "../components/css/contact.css"
 
 export default function Contact() {
-  const navigate = useNavigate()
+
   const [values, setValues] = useState({
     name: '',
     email: '',

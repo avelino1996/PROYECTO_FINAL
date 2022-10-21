@@ -2,15 +2,15 @@ import React from "react"
 import { Link, Route, Routes } from "react-router-dom";
 import AddRouteClub from "./AddRouteClub";
 import { RouteClub } from "./RouteClub";
-import "../../components/routesClubs.css"
+import "../../components/css/routesClubs.css"
 
 export function Routesclubs() {
 
   return (
     <div className="addForm">
-      <div className="routes">
+      <div className="route">
         <Link className="tittle" to="AddRouteClub">Añadir Ruta</Link>
-        <Link className="tittle" to="RouteClub">Rutas</Link>
+        <Link className="tittle" to="RouteClub">Rutas del club</Link>
 
       </div>
       <div>

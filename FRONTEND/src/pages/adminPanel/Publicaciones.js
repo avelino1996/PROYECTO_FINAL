@@ -2,7 +2,7 @@ import React from "react"
 import { Link, Route, Routes } from "react-router-dom";
 import AddPublication from "./AddPublication";
 import { ListPublications } from "./ListPublications";
-import "../../components/publicaciones.css"
+import "../../components/css/publicaciones.css"
 
 export function Publicaciones() {
 

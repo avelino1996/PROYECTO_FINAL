@@ -2,7 +2,7 @@ import React from "react"
 import { useState, useEffect } from "react";
 import { URL_ROUTES } from "../config";
 import CardRoutes from "../components/CardRoutes";
-import "../components/mountainRouts.css"
+import "../components/css/mountainRouts.css"
 
 export function MountainRout() {
 
@@ -17,7 +17,7 @@ export function MountainRout() {
         .then(data => {
             setRoutesData(data.routs)
         });
-}, []);
+}, [URLroutes]);
 
   return (
 

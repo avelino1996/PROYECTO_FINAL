@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { URL_PUBLICATIONS } from '../../config';
 import axios from 'axios';
-import "../../components/addPublication.css"
-import { useUser } from '../apiCore';
-
+import "../../components/css/addPublication.css"
 
 
 const AddPublication = () => {
-  const user = useUser();
-  const navigate = useNavigate();
   const [values, setValues] = useState({
     tittle: '',
     description: '',
@@ -28,7 +23,6 @@ const AddPublication = () => {
     distance,
     createBy,
     publicationNumber,
-    photo,
     loading,
     error,
     formData
@@ -36,7 +30,7 @@ const AddPublication = () => {
 
   useEffect(() => {
     setValues({...values, formData: new FormData()});
-  }, []); 
+  }, [values]); 
  
 
   const handleChange = name => event => {
