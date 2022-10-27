@@ -2,8 +2,6 @@ import React from "react"
 import { Navigate } from 'react-router';
 import { API } from '../config';
 
-
-
 export const signin = user => {
   return fetch(`${API}/api/users/login`, {
     method: "POST",
@@ -11,13 +9,10 @@ export const signin = user => {
       Accept: 'application/json',
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(user) // user: 
+    body: JSON.stringify(user)
   })
     .then(response => {
       return response.json();
-    })
-    .catch(err => {
-      console.log(err);
     })
 };
 
@@ -118,7 +113,6 @@ export const isAuthenticated = () => {
     return false;
   }
   if (localStorage.getItem('jwt')) {
-   // return //JSON.parse(localStorage.getItem('jwt'));
     return localStorage.getItem('jwt')
   }
     return false;

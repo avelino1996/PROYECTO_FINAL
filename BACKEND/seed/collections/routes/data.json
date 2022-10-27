@@ -1,0 +1,34 @@
+[
+  {
+    "_id": {
+      "$oid": "631784e993b736d14ecb7de9"
+    },
+    "title": "Silextrem",
+    "description": "Ruta estrella del club. Esta ruta es la más conocida de nuestro club ya que es con la que se nos conoce. Es una ruta en la que participan muchos clubs de toda España y es de tiempo libre, es decir, se viene a disfrutar, no a competir. Tiene varias paradas para hidratarse y un recorrido para aprovechar al máximo cada tramo de la ruta.",
+    "distance": "28 Km aproximadamente ",
+    "photo": "public/upload/routes/631784e993b736d14ecb7de9.jpg",
+    "__v": 0,
+    "routeNumber": "1"
+  },
+  {
+    "_id": {
+      "$oid": "631f7fdf64498cf47c2eace8"
+    },
+    "title": "Subida al Veleta",
+    "description": "La subida al pico Veleta es una marcha que realizan los propios componentes del club todos los años con motivo de celebración y convivencia entre todos. Todo el que quiera puede venir también, incluso hay años que las parejas de los que afrontan esta aventura también vienen aunque no realicen la subida pero si para la hora de comer. ",
+    "distance": "60 Km aproximadamente ",
+    "photo": "public/upload/routes/631f7fdf64498cf47c2eace8.jpg",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "634542b206bc12a57493f629"
+    },
+    "title": "Nocturna familiar",
+    "description": "Cuando va llegando el final del verano y coincidiendo con la entrada al colegio de los niños, nos gusta siempre hacer una ruta familiar de noche. Esta ruta es muy entrañable ya que participan personas de todas las edades. El recorrido es muy ameno y siempre se hace con iluminación para evitar cualquier caida en la noche. Al final de esta ruta se entrega siempre un refrigerio.",
+    "dayAt": "Finales de vernao",
+    "distance": "8 Km aproximadamente ",
+    "photo": "public/upload/routes/634542b206bc12a57493f629.jpg",
+    "__v": 0
+  }
+]

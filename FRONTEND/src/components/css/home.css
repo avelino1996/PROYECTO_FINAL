@@ -1,7 +1,12 @@
 .publications{
-    display: flex;
-    justify-content: space-between;
-    min-width: 310px;
+    margin: 1em;
+    display: grid;
+    justify-content:center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
    
 }
 .welcome {
@@ -20,8 +25,8 @@
     .publications{
         min-width: 310px;
         display:  grid;
-    justify-content:center;
-    justify-items: center;
+        grid-template-columns: none;
+        grid-template-rows: none;
     }
     .welcome{
         margin-left: 1.6em;

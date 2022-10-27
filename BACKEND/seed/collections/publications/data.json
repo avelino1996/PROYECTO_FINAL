@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {
+      "$oid": "6345430706bc12a57493f62d"
+    },
+    "createAt": {
+      "$date": "2022-10-11T10:18:47.320Z"
+    },
+    "title": "Primera publicación de esta página",
+    "description": "Esta es la primera presentación de los silexbiker, una imagen que muestra como acabamos cuando andamos en bicicleta",
+    "distance": "25km",
+    "createBy": "Avelino",
+    "photo": "public/upload/publications/6345430706bc12a57493f62d.jpg",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "634ec9ae109e93221255ef6e"
+    },
+    "createAt": {
+      "$date": "2022-10-18T15:43:42.200Z"
+    },
+    "title": "Día para disfrutar del descenso",
+    "description": "Hoy ha sido un día para disfrutar del descenso con la bicicleta. Hemos tenido que protejernos bien para las posibles caidas pero al final todo salió genial y no hubo ningún susto.",
+    "distance": "Unos 25 km aprox",
+    "createBy": "Avelino",
+    "photo": "public/upload/publications/634ec9ae109e93221255ef6e.jpg",
+    "__v": 0
+  }
+]

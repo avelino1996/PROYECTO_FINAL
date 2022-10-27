@@ -1,8 +1,10 @@
 import React from "react";
 import { isAuthenticated, signout, useUser } from "./apiCore";
 import "../components/css/navigation.css"
+import { useUserContext } from "../App.state";
 
-export default function Navigation(history) {
+export default function Navigation() {
+  const {actualUser} = useUserContext();
   const users = useUser();
 
   return (

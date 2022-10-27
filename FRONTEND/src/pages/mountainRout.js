@@ -26,9 +26,7 @@ export function MountainRout() {
     
     <div className="routesClub">
       
-      <div className="routes">
         {routesData && routesData.map(route => <CardRoutes key={route._id} routesData={route} />)}
-      </div>
       
     </div>
     </>

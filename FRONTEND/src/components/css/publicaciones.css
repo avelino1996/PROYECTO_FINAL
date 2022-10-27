@@ -10,8 +10,9 @@
     min-width: none;
     width: auto;
     align-items: center;
+    margin-bottom: 0.2em;
 }
-.tittle{
+.title{
     padding: 1em;
     text-decoration: none;
     color: black;
@@ -30,7 +31,7 @@
         width: auto;
         align-items: center;
     }
-    .tittle{
+    .title{
         padding: 0.2em;
         margin-left: 0;
     }

@@ -2,7 +2,11 @@
     height: 100%;
     margin-left: 2em;
     margin-right: 2em;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     justify-content: center;
     justify-self: center;
 }
@@ -12,8 +16,6 @@
     display: flex;
     justify-content: center;
     justify-self: center;
-}
-.parent{
 }
 .rutasTitle{
     margin-left: 4em;
@@ -30,22 +32,27 @@
 @media only screen and (max-width: 1296px) {
     .routesClub {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
         justify-content: center;
+        justify-self: center;
         min-width: 420px;
-    }
-    .routes{
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        flex-direction: column;
     }
 
 }
 
-@media only screen and (max-width: 800px) {
-    .routes{
-        display: flex;
-        flex-direction: column;
+@media only screen and (max-width: 865px) {
+    .routesClub{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-content: center;
+        justify-self: center;
+        min-width: 310px;
     }
 
 }

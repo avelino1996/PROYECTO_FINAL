@@ -3,9 +3,12 @@ import {  Navigate } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { signin, authenticate, isAuthenticated, useUser} from './apiCore'
 import "../components/css/login&create.css"
+import { useUserContext } from '../App.state';
+
 
 
 export default function Login() {
+  const {updateUserData} = useUserContext();
   const navigate = useNavigate();
   const users = useUser();
     const [values, setValues] = useState({
@@ -29,17 +32,18 @@ export default function Login() {
       setValues({ ...values, error: false, loading: true })
       signin({ email, password })
         .then(data => {
-          if (data.error) {
-            setValues({ ...values, error: data.error, loading: false })
-          } else {
+          if(data.ok){
             authenticate(
               data, () => {
+                updateUserData(values);
                 setValues({
                   ...values,
                   redirectToReferrer: true
                 })
               }
             )
+          }else{
+            setValues({ ...values, error: data.error.message, loading: false, redirectToReferrer: false })
           }
         })
     }
@@ -87,7 +91,7 @@ export default function Login() {
         if (users && users.role === "ADMIN") {
           return <Navigate to="/AdminPanel" />
         } else {
-          return <Navigate to="/mountainRout" />
+          return <Navigate to="/" />
         }
       }
       if (user && isAuthenticated()) {

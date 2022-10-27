@@ -21,7 +21,7 @@
     margin: 0 2em 0 2em ;
    
 }
-.tittleForm{
+.titleForm{
     margin: 1em;
     text-align: center;
 }
@@ -117,7 +117,7 @@
         box-shadow: 0 10px 15px 0 rgb(127, 112, 112), 0 5px 10px 0 rgb(154, 139, 139);
         border: 0.5px solid rgb(199, 192, 192);
     }
-    .tittleForm{
+    .titleForm{
         font-size: 2rem;
     }
     .textDirection{
