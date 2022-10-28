@@ -87,4 +87,10 @@ Un ejemplo de como sería cada documento:
     "description": "Esto es un test de prueba para probar la app",
     "__v": 0
   }
+
+Una vez se haya inicializado el proyecto se deberá entrar con unas credenciales. Para el caso de un usuario con el rol de USER se debe usar el siguiente email: user@test.com y contraseña: 1234
+para el caso de un usuario con rol de ADMIN: test@gmail.com y contraseña: 1234.
+De este modo se pueden ver tanto las páginas públicas como las privadas dentro del rol de ADMIN.
+
+  
   
