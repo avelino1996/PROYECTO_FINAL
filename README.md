@@ -12,6 +12,7 @@ Para poder poner en funcionamiento el proyecto se necesitan varios prerequisitos
 
 - Instalar node
 - Instalar docker
+- Ini iniciar docker
 
 3º => Ejecutar los siguientes comandos:
 
