@@ -48,4 +48,43 @@ Un ejemplo de como sería cada documento:
     "__v": 0
   }
 
+- publication: 
+{
+    "_id": {
+      "$oid": "6345430706bc12a57493f62d"
+    },
+    "createAt": {
+      "$date": "2022-10-11T10:18:47.320Z"
+    },
+    "title": "Primera publicación de esta página",
+    "description": "Esta es la primera presentación de los silexbiker, una imagen que muestra como acabamos cuando andamos en bicicleta",
+    "distance": "25km",
+    "createBy": "Avelino",
+    "photo": "public/upload/publications/6345430706bc12a57493f62d.jpg",
+    "__v": 0
+  }
+
+- route: 
+"_id": {
+      "$oid": "631784e993b736d14ecb7de9"
+    },
+    "title": "Silextrem",
+    "description": "Ruta estrella del club. Esta ruta es la más conocida de nuestro club ya que es con la que se nos conoce. Es una ruta en la que participan muchos clubs de toda España y es de tiempo libre, es decir, se viene a disfrutar, no a competir. Tiene varias paradas para hidratarse y un recorrido para aprovechar al máximo cada tramo de la ruta.",
+    "distance": "28 Km aproximadamente ",
+    "photo": "public/upload/routes/631784e993b736d14ecb7de9.jpg",
+    "__v": 0,
+    "routeNumber": "1"
+  }
+
+- coment:
+{
+    "_id": {
+      "$oid": "634677b3a14283d9ae61314c"
+    },
+    "name": "TEST",
+    "email": "test1@hotmail.es",
+    "surname": "1",
+    "description": "Esto es un test de prueba para probar la app",
+    "__v": 0
+  }
   

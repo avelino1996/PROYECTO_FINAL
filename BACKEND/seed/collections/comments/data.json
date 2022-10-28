@@ -6,7 +6,7 @@
     "name": "TEST",
     "email": "test1@hotmail.es",
     "surname": "1",
-    "description": "Esto es un test de prueba para probar la app, hhhhhhhhhhhhhhhhhasssssssssssssss sssssssssssssssss ssssssssssssssss sssssssssssssssss ssssssssssssjjjjjjjjjjj               jjjjjjjjjjjj        j",
+    "description": "Esto es un test de prueba para probar la app",
     "__v": 0
   },
   {
@@ -16,7 +16,7 @@
     "name": "TEST",
     "email": "test3@gmail.com",
     "surname": "2",
-    "description": "Esto es un test de prueba para probar la app, hhhhhhhhhhhhhhhhhasssssssssssssss sssssssssssssssss ssssssssssssssss sssssssssssssssss ssssssssssssjjjjjjjjjjj               jjjjjjjjjjjj        j",
+    "description": "Esto es un test de prueba para probar la app",
     "__v": 0
   }
 ]

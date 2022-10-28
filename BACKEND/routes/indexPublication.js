@@ -7,27 +7,6 @@ const { create, list } = require("../controllers/publicationControllers");
 router.get("/publicationsList", list);
 router.post("/createPublication", create);
 
-router.put("/:id", (req, res) => {
-  const id = req.params.id;
-  const body = ramda.pick(
-    ["title", "description", "distance", "createBy", "photo"],
-    req.body
-  );
-
-  Publication.findByIdAndUpdate(
-    id,
-    body,
-    { new: true, runValidators: true, context: "query" },
-    (error, updatedPublication) => {
-      if (error) {
-        res.status(400).json({ ok: false, error });
-      } else {
-        res.status(200).json({ ok: true, updatedPublication });
-      }
-    }
-  );
-});
-
 router.delete("/:id", (req, res) => {
   const id = req.params.id;
 
