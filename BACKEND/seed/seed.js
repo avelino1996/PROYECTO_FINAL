@@ -18,10 +18,8 @@ seeder
   .import(collections)
   .then(() => {
     // Do whatever you want after successful import
-    console.log("Hola :) ");
   })
   .catch((err) => {
     // Handle errors
-    console.log("Tu madre");
     console.error(err);
   });
