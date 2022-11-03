@@ -48,9 +48,9 @@ Un ejemplo de como sería cada colección y sus respectivos endpoints:
     "active": true,
     "__v": 0
   }
--------------------------- -------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
           URL                            |  TIPO    |     DESCRIPCIÓN      |          ROLE
--------------------------- -------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
   127.0.0.1:4005/api/users/login/        |   GET    |        login         |       USER y ADMIN
 ----------------------------------------------------------------------------------------------------  
   127.0.0.1:4005/api/users/logOut        |  POST    |    Cierra sesión     |       USER y ADMIN
@@ -62,7 +62,7 @@ Un ejemplo de como sería cada colección y sus respectivos endpoints:
   127.0.0.1:4005/api/users/users/id      |   PUT    |   Edita un usuario   |           ADMIN
   --------------------------------------------------------------------------------------------------
   127.0.0.1:4005/api/users/users/id      |  DELETE  |   Borra un usuario   |           ADMIN
-------------------------- --------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 
 
 
@@ -82,12 +82,14 @@ Un ejemplo de como sería cada colección y sus respectivos endpoints:
     "__v": 0
   }
 
-------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
                          URL                       |  TIPO  |       DESCRIPCIÓN        |    ROLE
-------------------------------------------------------------------------------------------------------
-127.0.0.1:4005/api/publications/publicationsList       GET     Lista las publicaciones   USER y ADMIN
-127.0.0.1:4005/api/publications/createPublication     POST      Crea una publicación        ADMIN
-127.0.0.1:4005/api/publications/id                   DELETE     Borra una publicación       ADMIN
+----------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/publications/publicationsList   |   GET  |  Lista las publicaciones |  USER y ADMIN
+----------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/publications/createPublication  |   POST |     Crea una publicación |     ADMIN
+----------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/publications/id                 | DELETE |    Borra una publicación |    ADMIN
 ------------------------------------------------------------------------------------------------------
 
 
@@ -106,9 +108,11 @@ Un ejemplo de como sería cada colección y sus respectivos endpoints:
 -------------------------------------------------------------------------------------------------------
                          URL                       |  TIPO  |       DESCRIPCIÓN        |    ROLE
 -------------------------------------------------------------------------------------------------------
-127.0.0.1:4005/api/routes/routesList                   GET      Lista todas la rutas      USER y ADMIN
-127.0.0.1:4005/api/routes/createRout                  POST         Crea una ruta            ADMIN
-127.0.0.1:4005/api/routes/id                         DELETE       Borra una ruta            ADMIN
+127.0.0.1:4005/api/routes/routesList               |   GET  |    Lista todas la rutas  |    USER y ADMIN
+-------------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/routes/createRout               |   POST |        Crea una ruta     |       ADMIN
+-------------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/routes/id                       | DELETE |       Borra una ruta     |       ADMIN
 -------------------------------------------------------------------------------------------------------
 
 
@@ -126,11 +130,13 @@ Un ejemplo de como sería cada colección y sus respectivos endpoints:
     "__v": 0
   }
 ----------------------------------------------------------------------------------------------------
-                         URL                       |  TIPO  |       DESCRIPCIÓN        |    ROLE
+                         URL                       |  TIPO  |       DESCRIPCIÓN        |      ROLE
 ----------------------------------------------------------------------------------------------------
-127.0.0.1:4005/api/coment/comentList                   GET      Lista los comentarios    USER y ADMIN
-127.0.0.1:4005/api/coment/createComent                 POST       Crea un comentario        ADMIN
-127.0.0.1:4005/api/coment/id                         DELETE      Borra un comentario        ADMIN
+127.0.0.1:4005/api/coment/comentList               |   GET  |    Lista los comentarios |   USER y ADMIN
+------------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/coment/createComent             |  POST  |    Crea un comentario    |     ADMIN
+------------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/coment/id                       | DELETE |      Borra un comentario |     ADMIN
 ----------------------------------------------------------------------------------------------------
 
 Una vez se haya inicializado el proyecto se deberá entrar con unas credenciales. Para el caso de un usuario con el rol de USER se debe usar el siguiente email: user@test.com y contraseña: 1234
