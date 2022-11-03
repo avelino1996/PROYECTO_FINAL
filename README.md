@@ -48,16 +48,16 @@ Un ejemplo de como sería cada colección y sus respectivos endpoints:
     "active": true,
     "__v": 0
   }
-----------------------------------------------------------------------------------------------------
+-------------------------- -------------------------------------------------------------------------
           URL                            |  TIPO    |     DESCRIPCIÓN      |          ROLE
-----------------------------------------------------------------------------------------------------
-  127.0.0.1:4005/api/users/login/              GET            login                USER y ADMIN
-  127.0.0.1:4005/api/users/logOut             POST        Cierra sesión            USER y ADMIN
-  127.0.0.1:4005/api/users/users/list          GET     Lista los usuarios             ADMIN
-  127.0.0.1:4005/api/users/users/create       POST      Crea un usuario               ADMIN
-  127.0.0.1:4005/api/users/users/id           PUT       Edita un usuario              ADMIN
-  127.0.0.1:4005/api/users/users/id          DELETE     Borra un usuario              ADMIN
-----------------------------------------------------------------------------------------------------
+-------------------------- -------------------------------------------------------------------------
+  127.0.0.1:4005/api/users/login/        |   GET    |        login         |       USER y ADMIN
+  127.0.0.1:4005/api/users/logOut        |  POST    |    Cierra sesión     |       USER y ADMIN
+  127.0.0.1:4005/api/users/users/list    |   GET    |  Lista los usuarios  |           ADMIN
+  127.0.0.1:4005/api/users/users/create  |   POST   |   Crea un usuario    |           ADMIN
+  127.0.0.1:4005/api/users/users/id      |   PUT    |   Edita un usuario   |           ADMIN
+  127.0.0.1:4005/api/users/users/id      |  DELETE  |   Borra un usuario   |           ADMIN
+------------------------- --------------------------------------------------------------------------
 
 
 
