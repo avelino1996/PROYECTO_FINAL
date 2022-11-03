@@ -2,19 +2,23 @@ El proyecto, "Silexbikers", se divide en dos, frontend y backend. Por el lado de
 
 Para poder poner en funcionamiento el proyecto se necesitan varios prerequisitos:
 
-1º => Descargar o tener descargado:
+1º => Clonar el repositorio del proyecto en una carpeta desde: 
+- https://github.com/avelino1996/PROYECTO_FINAL.git
+
+
+2º => Descargar o tener descargado:
 - Node 16.16.0
 - Docker
 
-2º => Como ejecutar (seguir los pasos según la lista):
+3º => Como ejecutar (seguir los pasos según la lista):
 
 - Instalar node
 - Instalar docker
 - Iniciar docker
 
-3º => Abrir dos terminales con las carpetas BACKEND por un lado y la carpeta FRONTEND por otro lado.
+4º => Abrir dos terminales con las carpetas BACKEND por un lado, y la carpeta FRONTEND por otro lado. (Estas carpetas estarán dentro del repositorio clonado)
 
-4º => Ejecutar los siguientes comandos en las consolas correspondientes de las carpetas BACKEND y FRONTEND:
+5º => Ejecutar los siguientes comandos en las consolas correspondientes de las carpetas BACKEND y FRONTEND:
 
 "ADVERTENCIA"
 Si se usa Windows, hay un bug con las ultimas versiones de node LTS y no ejecuta correctamente npm install.
@@ -32,7 +36,7 @@ _ npm run dev
 
 Con todo esto debe ser suficiente para usar libremente el proyecto.
 
-Para enfacitar más en la parte de Backend, cabe destacar que son cuatro las colecciones que uso en la base de datos, estas son: comments, publications, routes, users.
+Para enfacitar más en la parte de Backend, cabe destacar que son cuatro las colecciones que uso en la base de datos "SilexBikers" y que se alojan en la carpeta "seed" dentro de la carpeta de BACKEND, estas son: comments, publications, routes y users.
 
 Un ejemplo de como sería cada colección y sus respectivos endpoints:
 
