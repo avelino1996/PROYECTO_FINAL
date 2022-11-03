@@ -1,40 +1,40 @@
-Hola, mi nombre es Andrés Avelino Gómez Aranda y entré al Bootcamp de Desarrollo Web Full Stack porque necesitaba un cambio de vida radical, tras haber estudiado Óptica y Optometría en la universidad de Granada y llevar ya 2 años ejerciendo como óptico me he dado cuenta que mis aspiraciones no han terminado de cumplirse, me he visto estancado desde que comencé y sin motivación alguna. Es por eso que tras hablar con mis compañeros de piso, uno de ellos ingeniero senior en desarrollo web y el otro middle en QA me recomendaron que buscase una academia para aprender sobre desarrollo web y justo di con Codespace. 
-Mi proyecto, Silexbikers, se divide en dos, frontend y backend. Por el lado del frontend he utilizado React, axios, bootstrap, reactstrap entre otras tecnologías y librerias. Por otro lado, para el backend he usado, mongoose, express, jsonwebtoken, bcrypt, morgan, cors, etc. Para la base de datos he usado mongoDb.
-El proyecto está pensado para usarlo como página pública en el club de bicicletas de mi pueblo y así expandir más lo que hacemos.
-En cuanto a la complejidad, lo más complicado para mi ha sido la parte del CRUD, me costó mucho realizar un CRUD completo para cada una de las colecciones de la base de datos el proyecto pero al final pude hacerlo todo correctamente.
+El proyecto, "Silexbikers", se divide en dos, frontend y backend. Por el lado del frontend he utilizado React, axios, bootstrap, reactstrap entre otras tecnologías y librerias. Por otro lado, para el backend he usado, mongoose, express, jsonwebtoken, bcrypt, morgan, cors, etc. Para la base de datos he usado mongoDb.
+
 Para poder poner en funcionamiento el proyecto se necesitan varios prerequisitos:
 
-1º => Intalar:
+1º => Descargar o tener descargado:
 - Node 16.16.0
 - Docker
 
-2º => Como ejecutar:
+2º => Como ejecutar (seguir los pasos según la lista):
 
 - Instalar node
 - Instalar docker
-- Ini iniciar docker
+- Iniciar docker
 
-3º => Ejecutar los siguientes comandos:
+3º => Abrir dos terminales con las carpetas BACKEND por un lado y la carpeta FRONTEND por otro lado.
+
+4º => Ejecutar los siguientes comandos en las consolas correspondientes de las carpetas BACKEND y FRONTEND:
 
 "ADVERTENCIA"
 Si se usa Windows, hay un bug con las ultimas versiones de node LTS y no ejecuta correctamente npm install.
 Se recomienda usar una versión más baja de node, como la 16.13.2
 
-BACKEND
+En la terminal con la carpeta BACKEND ejecutaremos los siguientes comandos (seguir los pasos según la lista)
 _ npm install
 _ npm run db
 _ npm run seed
 _ npm run dev
 
-FRONTEND
+En la terminal con la carpeta FRONTEND ejecutaremos los siguientes comandos (seguir los pasos según la lista)
 _ npm install
 _ npm run dev
 
 Con todo esto debe ser suficiente para usar libremente el proyecto.
 
-Para enfacitar más en la parte de Backend, cabe destacar que son cuatro las colecciones que uso: comments, publications, routes, users.
+Para enfacitar más en la parte de Backend, cabe destacar que son cuatro las colecciones que uso en la base de datos, estas son: comments, publications, routes, users.
 
-Un ejemplo de como sería cada documento:
+Un ejemplo de como sería cada colección y sus respectivos endpoints:
 
 - users:
   {
@@ -48,6 +48,18 @@ Un ejemplo de como sería cada documento:
     "active": true,
     "__v": 0
   }
+----------------------------------------------------------------------------------------------------
+          URL                            |  TIPO    |     DESCRIPCIÓN      |          ROLE
+----------------------------------------------------------------------------------------------------
+  127.0.0.1:4005/api/users/login/              GET            login                USER y ADMIN
+  127.0.0.1:4005/api/users/logOut             POST        Cierra sesión            USER y ADMIN
+  127.0.0.1:4005/api/users/users/list          GET     Lista los usuarios             ADMIN
+  127.0.0.1:4005/api/users/users/create       POST      Crea un usuario               ADMIN
+  127.0.0.1:4005/api/users/users/id           PUT       Edita un usuario              ADMIN
+  127.0.0.1:4005/api/users/users/id          DELETE     Borra un usuario              ADMIN
+----------------------------------------------------------------------------------------------------
+
+
 
 - publication: 
 {
@@ -65,6 +77,16 @@ Un ejemplo de como sería cada documento:
     "__v": 0
   }
 
+------------------------------------------------------------------------------------------------------
+                         URL                       |  TIPO  |       DESCRIPCIÓN        |    ROLE
+------------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/publications/publicationsList       GET     Lista las publicaciones   USER y ADMIN
+127.0.0.1:4005/api/publications/createPublication     POST      Crea una publicación        ADMIN
+127.0.0.1:4005/api/publications/id                   DELETE     Borra una publicación       ADMIN
+------------------------------------------------------------------------------------------------------
+
+
+
 - route: 
 "_id": {
       "$oid": "631784e993b736d14ecb7de9"
@@ -76,6 +98,16 @@ Un ejemplo de como sería cada documento:
     "__v": 0,
     "routeNumber": "1"
   }
+-------------------------------------------------------------------------------------------------------
+                         URL                       |  TIPO  |       DESCRIPCIÓN        |    ROLE
+-------------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/routes/routesList                   GET      Lista todas la rutas      USER y ADMIN
+127.0.0.1:4005/api/routes/createRout                  POST         Crea una ruta            ADMIN
+127.0.0.1:4005/api/routes/id                         DELETE       Borra una ruta            ADMIN
+-------------------------------------------------------------------------------------------------------
+
+
+
 
 - coment:
 {
@@ -88,6 +120,13 @@ Un ejemplo de como sería cada documento:
     "description": "Esto es un test de prueba para probar la app",
     "__v": 0
   }
+----------------------------------------------------------------------------------------------------
+                         URL                       |  TIPO  |       DESCRIPCIÓN        |    ROLE
+----------------------------------------------------------------------------------------------------
+127.0.0.1:4005/api/coment/comentList                   GET      Lista los comentarios    USER y ADMIN
+127.0.0.1:4005/api/coment/createComent                 POST       Crea un comentario        ADMIN
+127.0.0.1:4005/api/coment/id                         DELETE      Borra un comentario        ADMIN
+----------------------------------------------------------------------------------------------------
 
 Una vez se haya inicializado el proyecto se deberá entrar con unas credenciales. Para el caso de un usuario con el rol de USER se debe usar el siguiente email: user@test.com y contraseña: 1234
 para el caso de un usuario con rol de ADMIN: test@gmail.com y contraseña: 1234.
