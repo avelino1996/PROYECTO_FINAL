@@ -50,7 +50,7 @@ De este modo se pueden ver tanto las páginas públicas como las privadas dentro
 
 ## Colecciones
 
-Se alojan en la carpeta db del proyecto de BACKEND, y son las siguientes:
+Se alojan en la carpeta seed del proyecto de BACKEND, y son las siguientes:
 
 ### `comments`
 
