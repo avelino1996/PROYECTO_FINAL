@@ -5,9 +5,12 @@ El proyecto, "Silexbikers", se divide en dos, frontend y backend. Por el lado de
 1. Clonar el repositorio del proyecto en una carpeta desde:
    - https://github.com/avelino1996/PROYECTO_FINAL.git
 2. Descargar o tener descargado:
-   - NodeJS
-   - Docker
-3. Iniciar Docker
+   - NodeJS 16.13.2
+3. Ejecutar el siguiente script en la carpeta BACKEND, para instalar docker:
+    (Asegurarse de no tener instalado docker-compose antes de ejecutar este script ya que, de ser así, no funcionará)
+   - sh docker-install.sh (Este sript actualizará docker y docker-compose a las últimas versiones del repositorio oficial, ya que  las versiones que se instalan del repositorio de linux-mint están obsoletas)
+4. Reiniciar la máquina virtual 
+
 ### ADVERTENCIA
 
 Si se usa Windows, hay un bug con las últimas versiones de node LTS y no ejecuta correctamente el comando npm install.
